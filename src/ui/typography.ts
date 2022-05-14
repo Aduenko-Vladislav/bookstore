@@ -40,24 +40,36 @@ const S1 = css`
 const B1 = css`
   font-size: 16px;
   line-height: 32px;
+  color: ${Colors.primary};
 `;
 
 const B2 = css`
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
+  color: ${Colors.secondary};
 `;
 
 const button = css`
+  margin: 0 auto;
+  padding: 16px 0;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.05em;
+  color: ${Colors.white};
+  background-color: ${Colors.primary};
+  &:hover,
+  :active {
+    background-color: ${Colors.primary2};
+  }
 `;
 
 const input = css`
   font-size: 16px;
   line-height: 32px;
+  padding: 12px 20px;
   color: ${Colors.secondary};
 `;
 
