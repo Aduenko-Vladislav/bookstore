@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledHeaderNav = styled.div`
+const StyledHeaderNav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +10,7 @@ export const StyledHeaderNav = styled.div`
   width: 100%;
 `;
 
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,9 @@ export const StyledLink = styled(Link)`
   height: 56px;
 `;
 
-export const NavIcon = styled.img`
+const NavIcon = styled.img`
   width: 24px;
   height: 24px;
 `;
+
+export { NavIcon, StyledLink, StyledHeaderNav };

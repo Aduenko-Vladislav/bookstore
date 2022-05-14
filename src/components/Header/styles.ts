@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+const Container = styled.header`
   max-width: 1920px;
   width: 100%;
   padding: 0 16px;
-  margin-bottom: 72px;
+  margin: 0 auto 72px;
 `;
 
-export const StyledWrapper = styled.div`
+const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,4 +20,9 @@ export const StyledWrapper = styled.div`
   border-bottom: 1px solid #e7e7e7;
 `;
 
-export const Logo = styled.img``;
+const Logo = styled.img`
+  display: block;
+  cursor: pointer;
+`;
+
+export { Logo, Container, HeaderWrapper };

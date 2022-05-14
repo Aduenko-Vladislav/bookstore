@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { typography } from "../../ui/typography";
 import search from "../../assets/svg/search.svg";
 
-export const StyledHeaderForm = styled.form`
+const StyledHeaderForm = styled.form`
   position: relative;
 
   max-width: 542px;
@@ -11,13 +11,11 @@ export const StyledHeaderForm = styled.form`
   border: 1px solid #e7e7e7;
 `;
 
-export const SearchInput = styled.input`
-  padding: 12px 20px;
-
+const SearchInput = styled.input`
   ${typography.input}
 `;
 
-export const SearchFindButton = styled.button`
+const SearchFindButton = styled.button`
   position: absolute;
   right: 16px;
   top: 16px;
@@ -28,3 +26,5 @@ export const SearchFindButton = styled.button`
 
   background-image: url(${search});
 `;
+
+export { SearchFindButton, SearchInput, StyledHeaderForm };
