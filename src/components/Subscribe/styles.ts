@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Colors } from "../../ui/colors";
+import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
 const SubscribeContainer = styled.section`
@@ -7,44 +8,80 @@ const SubscribeContainer = styled.section`
   width: 100%;
   padding: 0 16px;
   margin: 0 auto 72px;
+  ${media.mobile} {
+    margin: 0 auto 56px;
+  }
 `;
 
 const SubscribeWrapper = styled.div`
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+
+  ${media.tablet} {
+    max-width: 688px;
+  }
+  ${media.mobile} {
+    max-width: 272px;
+  }
 `;
 
 const StyledSubscribe = styled.div`
   padding: 56px 64px;
 
   background: ${Colors.purple};
+  ${media.mobile} {
+    padding: 24px;
+  }
 `;
 
 const SubscribeTitle = styled.h2`
   ${typography.H2};
   color: ${Colors.primary};
+  text-transform: uppercase;
 `;
 
 const SubscribeSubtitle = styled.p`
   ${typography.S1};
   color: ${Colors.secondary};
   margin-bottom: 32px;
+  ${media.mobile} {
+    margin-bottom: 24px;
+  }
 `;
 
 const SubscribeForm = styled.div`
   display: flex;
+  ${media.mobile} {
+    display: block;
+  }
 `;
 
 const SubscribeInput = styled.input`
-  ${typography.input};
   max-width: 845px;
   width: 100%;
+  ${typography.input};
+
+  ${media.tablet} {
+    max-width: 608px;
+  }
+  ${media.mobile} {
+    max-width: 224px;
+    margin-bottom: 24px;
+  }
 `;
 
 const SubscribeButton = styled.button`
   ${typography.button};
   padding: 16px 40px;
+
+  ${media.tablet} {
+    max-width: 608px;
+  }
+  ${media.mobile} {
+    max-width: 224px;
+    padding: 16px 57px;
+  }
 `;
 
 export {
