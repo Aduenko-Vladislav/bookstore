@@ -1,17 +1,20 @@
-import { Container, HeaderWrapper, Logo } from "./styles";
+import { Container, StyledHeader, Logo } from "./styles";
 import logo from "../../assets/svg/logo.svg";
 import HeaderForm from "../HeaderForm/HeaderForm";
 import HeaderNav from "../HeaderNav/HeaderNav";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Container>
-      <HeaderWrapper>
-        <Logo src={logo} alt="logo" />
+    <StyledHeader>
+      <Container>
+        <Link to={"/bookstore"}>
+          <Logo src={logo} alt="logo" />
+        </Link>
         <HeaderForm />
         <HeaderNav />
-      </HeaderWrapper>
-    </Container>
+      </Container>
+    </StyledHeader>
   );
 };
 

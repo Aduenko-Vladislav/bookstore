@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const Container = styled.header`
+const StyledHeader = styled.header`
   max-width: 1920px;
   width: 100%;
   padding: 0 16px;
   margin: 0 auto 72px;
 `;
 
-const HeaderWrapper = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,4 +25,4 @@ const Logo = styled.img`
   cursor: pointer;
 `;
 
-export { Logo, Container, HeaderWrapper };
+export { Logo, Container, StyledHeader };

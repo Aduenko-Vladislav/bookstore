@@ -3,7 +3,7 @@ import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
-const SubscribeContainer = styled.section`
+const StyledSubscribe = styled.section`
   max-width: 1920px;
   width: 100%;
   padding: 0 16px;
@@ -13,7 +13,7 @@ const SubscribeContainer = styled.section`
   }
 `;
 
-const SubscribeWrapper = styled.div`
+const Container = styled.div`
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
@@ -26,7 +26,7 @@ const SubscribeWrapper = styled.div`
   }
 `;
 
-const StyledSubscribe = styled.div`
+const SubscribeBlock = styled.div`
   padding: 56px 64px;
 
   background: ${Colors.purple};
@@ -91,6 +91,6 @@ export {
   SubscribeSubtitle,
   SubscribeTitle,
   StyledSubscribe,
-  SubscribeWrapper,
-  SubscribeContainer,
+  Container,
+  SubscribeBlock,
 };

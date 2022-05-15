@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { media } from "../../ui/media";
 
 const StyledHeaderNav = styled.div`
   display: flex;
@@ -8,6 +9,9 @@ const StyledHeaderNav = styled.div`
 
   max-width: 184px;
   width: 100%;
+  ${media.tablet} {
+    display: none;
+  }
 `;
 
 const StyledLink = styled(Link)`

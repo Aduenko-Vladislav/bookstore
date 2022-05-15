@@ -5,15 +5,15 @@ import {
   SubscribeInput,
   SubscribeButton,
   SubscribeForm,
-  SubscribeWrapper,
-  SubscribeContainer,
+  Container,
+  SubscribeBlock,
 } from "./styles";
 
 const Subscribe = () => {
   return (
-    <SubscribeContainer>
-      <SubscribeWrapper>
-        <StyledSubscribe>
+    <StyledSubscribe>
+      <Container>
+        <SubscribeBlock>
           <SubscribeTitle>Subscribe to Newsletter</SubscribeTitle>
           <SubscribeSubtitle>
             Be the first to know about new IT books, upcoming releases,
@@ -23,9 +23,9 @@ const Subscribe = () => {
             <SubscribeInput placeholder="Your email" />
             <SubscribeButton>Subscribe</SubscribeButton>
           </SubscribeForm>
-        </StyledSubscribe>
-      </SubscribeWrapper>
-    </SubscribeContainer>
+        </SubscribeBlock>
+      </Container>
+    </StyledSubscribe>
   );
 };
 
