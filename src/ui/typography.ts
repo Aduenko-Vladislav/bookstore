@@ -32,8 +32,7 @@ const H3 = css`
 
 const S1 = css`
   font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 0.05em;
 `;
 
@@ -58,11 +57,15 @@ const button = css`
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: ${Colors.white};
   background-color: ${Colors.primary};
   &:hover,
   :active {
     background-color: ${Colors.primary2};
+  }
+  ${media.tablet} {
+    font-size: 18px;
   }
 `;
 
