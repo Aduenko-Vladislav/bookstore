@@ -3,12 +3,23 @@ import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 
 const StyledListItem = styled.li`
-  margin: 0 auto;
+ 
   display: flex;
   flex-direction: column;
+
+  margin: 0 auto;
+  border-radius: 5px;
+
   background: ${Colors.blue};
   box-shadow: 0px 4px 20px 0px rgba(34, 60, 80, 0.44);
-  border-radius: 5px;
+  
+  transition: .3s linear;
+  position: relative;
+  bottom: 0;
+  &:hover {
+    position: relative;
+    bottom: 20px;
+  }
 `;
 
 const StyledImg = styled.img`
@@ -26,17 +37,21 @@ const BookTitle = styled.p`
   overflow: hidden;
   height: 64px;
   margin-bottom: 15px;
+  padding: 0 10px;
 `;
 
 const BookSubtitle = styled.p`
   ${typography.B2};
   margin-bottom: 40px;
+  padding: 0 10px;
 `;
 
 const BookPrice = styled.p`
   ${typography.H3};
   align-content: flex-end;
+  
   margin-top: auto;
+  padding: 0 10px;
 `;
 
 export { StyledListItem, BookTitle, BookSubtitle, BookPrice, StyledImg };
