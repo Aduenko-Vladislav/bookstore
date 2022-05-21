@@ -21,9 +21,6 @@ const Container = styled.div`
   ${media.tablet} {
     max-width: 688px;
   }
-  ${media.mobile} {
-    max-width: 272px;
-  }
 `;
 
 const SubscribeBlock = styled.div`

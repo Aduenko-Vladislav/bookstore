@@ -7,6 +7,8 @@ const StyledListItem = styled.li`
   display: flex;
   flex-direction: column;
 
+  max-width: 352px;
+  width: 100%;
   margin: 0 auto;
   border-radius: 5px;
 
