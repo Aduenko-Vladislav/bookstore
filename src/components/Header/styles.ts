@@ -24,6 +24,7 @@ const Container = styled.div`
 
 const Logo = styled(LogoIcon)`
   display: block;
+  margin-right: 10px;
   cursor: pointer;
 `;
 

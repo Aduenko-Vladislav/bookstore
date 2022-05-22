@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { Container } from "../components/Book/styles";
 import { List } from "../components/List/List";
-import { Container } from "../components/Subscribe/styles";
 import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
 import { bookApi } from "../services/bookService";

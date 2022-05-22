@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { typography } from "../../ui/typography";
-import search from "../../assets/svg/search.svg";
 import { media } from "../../ui/media";
+import { Search } from "../../assets/svg";
 
 const StyledHeaderForm = styled.form`
   position: relative;
@@ -20,7 +20,7 @@ const SearchInput = styled.input`
   max-width: 542px;
 `;
 
-const SearchFindButton = styled.button`
+const SearchFindButton = styled(Search)`
   position: absolute;
   right: 16px;
   top: 16px;
@@ -28,8 +28,6 @@ const SearchFindButton = styled.button`
   max-width: 24px;
   width: 24px;
   height: 24px;
-
-  background-image: url(search);
 `;
 
 export { SearchFindButton, SearchInput, StyledHeaderForm };

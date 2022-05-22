@@ -1,6 +1,6 @@
 import { IDetailsBookApi } from "../../services/types";
-import { Container } from "../Subscribe/styles";
 import Subscribe from "../Subscribe/Subscribe";
+import { Container } from "../Subscribe/styles";
 import {
   StyledBook,
   BookImageContainer,

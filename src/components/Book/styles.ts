@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Down } from "../../assets/svg";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
+import { media } from "../../ui/media";
 
 const StyledBook = styled.div`
   display: flex;
@@ -117,6 +118,17 @@ const DetailsList = styled.div`
   margin-bottom: 30px;
 `;
 
+const Container = styled.div`
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  ${media.tablet} {
+    max-width: 688px;
+  }
+`;
+
 export {
   StyledBook,
   BookImageContainer,
@@ -136,4 +148,5 @@ export {
   Tab,
   Description,
   DetailsList,
+  Container,
 };
