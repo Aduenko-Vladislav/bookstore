@@ -6,13 +6,19 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 } 
+
 button {
   font-family: inherit;
   border: 0;
   background: none;
   outline: none;
-  cursor: pointer
+  cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}
+
 input {
   border: none;
   &:focus {

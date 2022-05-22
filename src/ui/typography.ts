@@ -28,6 +28,7 @@ const H3 = css`
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+  color: ${Colors.primary};
 `;
 
 const S1 = css`
@@ -80,8 +81,12 @@ const tab = css`
   font-size: 16px;
   line-height: 24px;
   color: ${Colors.primary};
+  border-bottom: 2px solid transparent;
   &:hover {
-    line-height: 24px;
+    border-bottom: 2px solid ${Colors.primary};
+  }
+  &:active {
+    border-bottom: 2px solid ${Colors.red};
   }
 `;
 
