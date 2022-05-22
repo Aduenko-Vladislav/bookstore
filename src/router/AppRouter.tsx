@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import MainTemplate from "../components/MainTemplate";
-import Book from "../pages/Book";
+import { BookDetails } from "../pages/BookDetails";
 import { Home } from "../pages/Home";
 import SearchBooks from "../pages/SearchBooks";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/bookstore" element={<MainTemplate />}>
-        <Route index element={<Home />} />
-        <Route path="new" element={<Book />} />
-        <Route path="search" element={<SearchBooks />} />
+      <Route path="bookstore" element={<MainTemplate />}>
+        <Route path="/bookstore/" element={<Home />} />
+        <Route path="/bookstore/books/:id" element={<BookDetails />} />
+        <Route path="bookstore/search" element={<SearchBooks />} />
       </Route>
     </Routes>
   );

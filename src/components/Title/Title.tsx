@@ -8,5 +8,3 @@ interface ITitle {
 export const Title = ({ children }: ITitle) => {
   return <StyledTitle>{children}</StyledTitle>;
 };
-
-export default Title;
