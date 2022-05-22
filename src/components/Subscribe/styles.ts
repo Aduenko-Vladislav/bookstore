@@ -6,7 +6,6 @@ import { typography } from "../../ui/typography";
 const StyledSubscribe = styled.section`
   max-width: 1920px;
   width: 100%;
-  padding: 0 16px;
   margin: 0 auto 72px;
   ${media.mobile} {
     margin: 0 auto 56px;

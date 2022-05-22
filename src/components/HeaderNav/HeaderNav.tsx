@@ -1,19 +1,21 @@
-import { NavIcon, StyledHeaderNav, StyledLink } from "./styles";
-import like from "../../assets/svg/like.svg";
-import orders from "../../assets/svg/shopping-bag.svg";
-import profile from "../../assets/svg/user.svg";
-
+import {
+  NavIconLike,
+  NavIconOrder,
+  NavIconUser,
+  StyledHeaderNav,
+  StyledLink,
+} from "./styles";
 const HeaderNav = () => {
   return (
     <StyledHeaderNav>
       <StyledLink to="/">
-        <NavIcon src={like} alt="like" />
+        <NavIconLike />
       </StyledLink>
       <StyledLink to="/">
-        <NavIcon src={orders} alt="orders" />
+        <NavIconOrder />
       </StyledLink>
       <StyledLink to="/">
-        <NavIcon src={profile} alt="profile" />
+        <NavIconUser />
       </StyledLink>
     </StyledHeaderNav>
   );

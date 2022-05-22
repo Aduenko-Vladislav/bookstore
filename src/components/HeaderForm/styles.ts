@@ -29,7 +29,7 @@ const SearchFindButton = styled.button`
   width: 24px;
   height: 24px;
 
-  background-image: url(${search});
+  background-image: url(search);
 `;
 
 export { SearchFindButton, SearchInput, StyledHeaderForm };

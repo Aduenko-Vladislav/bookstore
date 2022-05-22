@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Like, Order, User } from "../../assets/svg";
 import { media } from "../../ui/media";
 
 const StyledHeaderNav = styled.div`
@@ -23,9 +24,17 @@ const StyledLink = styled(Link)`
   height: 56px;
 `;
 
-const NavIcon = styled.img`
+const NavIconLike = styled(Like)`
+  width: 24px;
+  height: 24px;
+`;
+const NavIconOrder = styled(Order)`
+  width: 24px;
+  height: 24px;
+`;
+const NavIconUser = styled(User)`
   width: 24px;
   height: 24px;
 `;
 
-export { NavIcon, StyledLink, StyledHeaderNav };
+export { NavIconLike, StyledLink, StyledHeaderNav, NavIconOrder, NavIconUser };

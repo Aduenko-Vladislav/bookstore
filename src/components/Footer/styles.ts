@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../ui/colors";
 import { media } from "../../ui/media";
 import { typography } from "../../ui/typography";
 
@@ -18,7 +19,7 @@ const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid ${Colors.gray};
   ${media.mobile} {
     display: block;
   }

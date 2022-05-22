@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 
 const StyledListItem = styled.li`
- 
   display: flex;
   flex-direction: column;
 
@@ -14,14 +14,18 @@ const StyledListItem = styled.li`
 
   background: ${Colors.blue};
   box-shadow: 0px 4px 20px 0px rgba(34, 60, 80, 0.44);
-  
-  transition: .3s linear;
+
+  transition: 0.3s linear;
   position: relative;
   bottom: 0;
   &:hover {
     position: relative;
     bottom: 20px;
   }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const StyledImg = styled.img`
@@ -51,9 +55,16 @@ const BookSubtitle = styled.p`
 const BookPrice = styled.p`
   ${typography.H3};
   align-content: flex-end;
-  
+
   margin-top: auto;
   padding: 0 10px;
 `;
 
-export { StyledListItem, BookTitle, BookSubtitle, BookPrice, StyledImg };
+export {
+  StyledListItem,
+  StyledLink,
+  BookTitle,
+  BookSubtitle,
+  BookPrice,
+  StyledImg,
+};
