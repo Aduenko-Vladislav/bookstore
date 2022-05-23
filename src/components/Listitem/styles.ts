@@ -4,8 +4,7 @@ import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 
 const StyledListItem = styled.li`
-  display: flex;
-  flex-direction: column;
+  display: -webkit-box;
 
   max-width: 352px;
   width: 100%;
@@ -25,7 +24,8 @@ const StyledListItem = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledImg = styled.img`
