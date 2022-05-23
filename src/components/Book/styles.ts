@@ -65,10 +65,22 @@ const Attribute = styled.p`
 const AddButton = styled.button`
   ${typography.button}
   width: 100%;
+  margin: 0 auto 20px;
 `;
 
 const ButtonDetails = styled.button`
   margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  cursor: pointer;
+`;
+
+const PreviewButton = styled.a`
+  display: block;
+  margin: 0 auto;
 
   font-weight: 400;
   font-size: 16px;
@@ -149,4 +161,5 @@ export {
   Description,
   DetailsList,
   Container,
+  PreviewButton,
 };

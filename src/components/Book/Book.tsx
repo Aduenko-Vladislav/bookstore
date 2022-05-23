@@ -20,13 +20,15 @@ import {
   TabContainer,
   Description,
   DetailsList,
+  PreviewButton,
 } from "./styles";
-
 interface IBookDetails {
   book: IDetailsBookApi;
 }
 
 const Book = ({ book }: IBookDetails) => {
+  const previews = book.pdf ? Object.values(book.pdf) : [];
+
   return (
     <>
       <StyledBook>
@@ -59,6 +61,9 @@ const Book = ({ book }: IBookDetails) => {
             </StyledLink>
           </ButtonDetails>
           <AddButton>add to cart</AddButton>
+          {previews.map((preview) => (
+            <PreviewButton href={preview}>Preview book</PreviewButton>
+          ))}
         </BookInfoContainer>
       </StyledBook>
 
