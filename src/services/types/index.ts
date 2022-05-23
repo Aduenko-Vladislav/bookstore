@@ -33,3 +33,7 @@ export interface IDetailsBookApi {
   url: string;
   year: string;
 }
+
+export interface ISearchBooksApi extends INewBooksApi {
+  page: string;
+}

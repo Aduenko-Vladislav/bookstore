@@ -20,7 +20,7 @@ const SearchInput = styled.input`
   max-width: 542px;
 `;
 
-const SearchFindButton = styled(Search)`
+const SearchFindButton = styled.button`
   position: absolute;
   right: 16px;
   top: 16px;
