@@ -57,7 +57,7 @@ const BookPrice = styled.p`
   align-content: flex-end;
 
   margin-top: auto;
-  padding: 0 10px;
+  padding: 0 10px 10px;
 `;
 
 export {
