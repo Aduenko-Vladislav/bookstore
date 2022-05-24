@@ -32,5 +32,5 @@ export const SliderTitle = styled.h3`
 
 export const SliderPrice = styled.h3`
   ${typography.H3}
-  padding: 0 20px;
+  padding: 0 20px 10px;
 `;
