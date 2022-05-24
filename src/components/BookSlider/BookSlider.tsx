@@ -34,15 +34,15 @@ export const BookSlider = ({ books }: IBookSlider) => {
           return (
             <SlideContainer>
               <StyledLink to={`/bookstore/books/${book.isbn13}`}>
-              <CustomSlide>
-                <img src={book.image} alt={book.title} />
-                <div>
-                  <SliderTitle>{book.title}</SliderTitle>
-                  <SliderPrice>
-                    {book.price === "$0.00" ? "Free for you" : book.price}
-                  </SliderPrice>
-                </div>
-              </CustomSlide>
+                <CustomSlide>
+                  <img src={book.image} alt={book.title} />
+                  <div>
+                    <SliderTitle>{book.title}</SliderTitle>
+                    <SliderPrice>
+                      {book.price === "$0.00" ? "Free for you" : book.price}
+                    </SliderPrice>
+                  </div>
+                </CustomSlide>
               </StyledLink>
             </SlideContainer>
           );

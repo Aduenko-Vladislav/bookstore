@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LogoIcon } from "../../assets/icons";
+import { LogoIcon } from "../../assets/svg";
 import { Colors } from "../../ui/colors";
 
 const StyledHeader = styled.header`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Down } from "../../assets/icons";
+import { Down } from "../../assets/svg";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 import { Link } from "react-scroll";
@@ -80,12 +80,13 @@ const ButtonDetails = styled.button`
 
 const PreviewButton = styled.a`
   display: block;
-  margin: 0 auto;
+  text-align: center;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 
+  color: ${Colors.PRIMARY};
   cursor: pointer;
 `;
 
