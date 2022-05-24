@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BookSlider } from "../components/BookSlider/BookSlider";
 import { List } from "../components/List/List";
 import { Container } from "../components/Subscribe/styles";
 import Subscribe from "../components/Subscribe/Subscribe";
@@ -21,6 +22,7 @@ export const Home = () => {
 
   return (
     <Container>
+      <BookSlider books={newBooks.books}/>
       <Title>New Releases Books</Title>
       <List books={newBooks.books} />
       <Subscribe />
