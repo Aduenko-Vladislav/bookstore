@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { typography } from "../../ui/typography";
 import { media } from "../../ui/media";
-import { Search } from "../../assets/svg";
 
 const StyledHeaderForm = styled.form`
   position: relative;
@@ -17,7 +16,8 @@ const StyledHeaderForm = styled.form`
 
 const SearchInput = styled.input`
   ${typography.input}
-  max-width: 542px;
+  max-width: 515px;
+  width: 100%;
 `;
 
 const SearchFindButton = styled.button`
