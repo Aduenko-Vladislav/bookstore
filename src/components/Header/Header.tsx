@@ -1,6 +1,6 @@
 import { Container, Logo, StyledHeader } from "./styles";
-import HeaderForm from "../HeaderForm/HeaderForm";
-import HeaderNav from "../HeaderNav/HeaderNav";
+import { Form } from "../Form/Form";
+import { Nav } from "../Nav/Nav";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -10,8 +10,8 @@ const Header = () => {
         <Link to={"/bookstore"}>
           <Logo />
         </Link>
-        <HeaderForm />
-        <HeaderNav />
+        <Form />
+        <Nav />
       </Container>
     </StyledHeader>
   );

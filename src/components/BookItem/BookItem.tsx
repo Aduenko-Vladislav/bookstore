@@ -5,16 +5,16 @@ import {
   BookTitle,
   StyledImg,
   StyledLink,
-  StyledListItem,
+  StyledBookItem,
 } from "./styles";
 
-interface IListItem {
+interface IBookItem {
   book: INewBookApi;
 }
 
-const ListItem = ({ book }: IListItem) => {
+export const BookItem = ({ book }: IBookItem) => {
   return (
-    <StyledListItem>
+    <StyledBookItem>
       <StyledLink to={`/bookstore/books/${book.isbn13}`}>
         <StyledImg src={book.image} alt={book.title} />
         <BookTitle>{book.title}</BookTitle>
@@ -23,8 +23,6 @@ const ListItem = ({ book }: IListItem) => {
           {book.price === "$0.00" ? "Free for you" : book.price}
         </BookPrice>
       </StyledLink>
-    </StyledListItem>
+    </StyledBookItem>
   );
 };
-
-export default ListItem;

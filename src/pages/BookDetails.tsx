@@ -5,8 +5,6 @@ import { IDetailsBookApi } from "../services/types";
 import BackButton from "../components/BackButton/BackButton";
 import { Title } from "../components/Title/Title";
 import Book from "../components/Book/Book";
-import styled from "styled-components";
-import { media } from "../ui/media";
 
 export const BookDetails = () => {
   const { id = "" } = useParams();
@@ -42,20 +40,10 @@ export const BookDetails = () => {
   }, [id]);
 
   return (
-    <Container>
+    <>
       <BackButton onClick={handleBack} />
       <Title>{detailsBook.title}</Title>
       <Book book={detailsBook} />
-    </Container>
+    </>
   );
 };
-const Container = styled.div`
-  max-width: 1120px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-
-  ${media.tablet} {
-    max-width: 688px;
-  }
-`;

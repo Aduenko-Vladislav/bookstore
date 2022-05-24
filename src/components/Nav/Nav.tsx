@@ -2,12 +2,12 @@ import {
   NavIconLike,
   NavIconOrder,
   NavIconUser,
-  StyledHeaderNav,
   StyledLink,
+  StyledNav,
 } from "./styles";
-const HeaderNav = () => {
+export const Nav = () => {
   return (
-    <StyledHeaderNav>
+    <StyledNav>
       <StyledLink to="/">
         <NavIconLike />
       </StyledLink>
@@ -17,8 +17,6 @@ const HeaderNav = () => {
       <StyledLink to="/">
         <NavIconUser />
       </StyledLink>
-    </StyledHeaderNav>
+    </StyledNav>
   );
 };
-
-export default HeaderNav;

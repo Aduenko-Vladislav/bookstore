@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { INewBookApi } from "../../services/types";
-import { StyledLink } from "../Listitem/styles";
+import { StyledLink } from "../BookItem/styles";
 import { Title } from "../Title/Title";
 import {
   CustomSlide,

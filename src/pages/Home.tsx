@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { BookSlider } from "../components/BookSlider/BookSlider";
-import { List } from "../components/List/List";
-import { Container } from "../components/Subscribe/styles";
+import { BookList } from "../components/BookList/BookList";
 import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
 import { bookApi } from "../services/bookService";
@@ -21,11 +20,11 @@ export const Home = () => {
   }, []);
 
   return (
-    <Container>
-      <BookSlider books={newBooks.books}/>
+    <>
+      <BookSlider books={newBooks.books} />
       <Title>New Releases Books</Title>
-      <List books={newBooks.books} />
+      <BookList books={newBooks.books} />
       <Subscribe />
-    </Container>
+    </>
   );
 };

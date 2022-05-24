@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { typography } from "../../ui/typography";
 import { media } from "../../ui/media";
 
-const StyledHeaderForm = styled.form`
+const StyledForm = styled.form`
   position: relative;
 
   max-width: 542px;
@@ -30,4 +30,4 @@ const SearchFindButton = styled.button`
   height: 24px;
 `;
 
-export { SearchFindButton, SearchInput, StyledHeaderForm };
+export { SearchFindButton, SearchInput, StyledForm };

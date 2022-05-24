@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledList = styled.ul`
+export const StyledBookList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(352px, 1fr));
   column-gap: 32px;

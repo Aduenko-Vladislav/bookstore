@@ -1,6 +1,5 @@
 import { IDetailsBookApi } from "../../services/types";
 import Subscribe from "../Subscribe/Subscribe";
-import { Container } from "../Subscribe/styles";
 import {
   StyledBook,
   BookImageContainer,
@@ -67,17 +66,12 @@ const Book = ({ book }: IBookDetails) => {
         </BookInfoContainer>
       </StyledBook>
 
-      <Container>
-        <TabContainer>
-          <Tab>Description</Tab>
-          <Tab>Authors</Tab>
-          <Tab>Reviews</Tab>
-        </TabContainer>
-      </Container>
-
-      <Container>
-        <Description>{book.desc}</Description>
-      </Container>
+      <TabContainer>
+        <Tab>Description</Tab>
+        <Tab>Authors</Tab>
+        <Tab>Reviews</Tab>
+      </TabContainer>
+      <Description>{book.desc}</Description>
 
       <DetailsList id="details">
         <Parameters>Authors</Parameters>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 
-const StyledListItem = styled.li`
+const StyledBookItem = styled.li`
   display: -webkit-box;
 
   max-width: 352px;
@@ -61,7 +61,7 @@ const BookPrice = styled.p`
 `;
 
 export {
-  StyledListItem,
+  StyledBookItem,
   StyledLink,
   BookTitle,
   BookSubtitle,

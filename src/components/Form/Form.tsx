@@ -2,24 +2,22 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { Search } from "../../assets/svg";
 
-import { SearchInput, SearchFindButton, StyledHeaderForm } from "./styles";
+import { SearchInput, SearchFindButton, StyledForm } from "./styles";
 
-const HeaderForm = () => {
+export const Form = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
 
   const onSubmit = (data: any) => {
-    navigate(`bookstore/search/${data.title}/1`); /// в url 2 раза bookstore!!
+    navigate(`bookstore/search/${data.title}/1`);
   };
 
   return (
-    <StyledHeaderForm onSubmit={handleSubmit(onSubmit)}>
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <SearchInput placeholder="Search" type="text" {...register("title")} />
       <SearchFindButton type="submit">
         <Search />
       </SearchFindButton>
-    </StyledHeaderForm>
+    </StyledForm>
   );
 };
-
-export default HeaderForm;

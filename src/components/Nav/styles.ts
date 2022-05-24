@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Like, Order, User } from "../../assets/svg";
 import { media } from "../../ui/media";
 
-const StyledHeaderNav = styled.div`
+const StyledNav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,4 +37,4 @@ const NavIconUser = styled(User)`
   height: 24px;
 `;
 
-export { NavIconLike, StyledLink, StyledHeaderNav, NavIconOrder, NavIconUser };
+export { NavIconLike, StyledLink, StyledNav, NavIconOrder, NavIconUser };
