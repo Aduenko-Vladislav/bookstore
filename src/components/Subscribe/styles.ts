@@ -48,6 +48,8 @@ const SubscribeSubtitle = styled.p`
 
 const SubscribeForm = styled.div`
   display: flex;
+  background-color: ${Colors.WHITE};
+  border-radius: 2px;
   ${media.mobile} {
     display: block;
   }
