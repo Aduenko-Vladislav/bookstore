@@ -28,7 +28,7 @@ const H3 = css`
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  color: ${Colors.primary};
+  color: ${Colors.PRIMARY};
 `;
 
 const S1 = css`
@@ -40,14 +40,14 @@ const S1 = css`
 const B1 = css`
   font-size: 16px;
   line-height: 32px;
-  color: ${Colors.primary};
+  color: ${Colors.PRIMARY};
 `;
 
 const B2 = css`
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
-  color: ${Colors.secondary};
+  color: ${Colors.SECONDARY};
 `;
 
 const button = css`
@@ -59,11 +59,11 @@ const button = css`
   line-height: 24px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: ${Colors.white};
-  background-color: ${Colors.primary};
+  color: ${Colors.WHITE};
+  background-color: ${Colors.PRIMARY};
   &:hover,
   :active {
-    background-color: ${Colors.primary2};
+    background-color: ${Colors.ELEMENTARY};
   }
   ${media.tablet} {
     font-size: 18px;
@@ -74,26 +74,26 @@ const input = css`
   font-size: 16px;
   line-height: 32px;
   padding: 12px 20px;
-  color: ${Colors.secondary};
+  color: ${Colors.SECONDARY};
 `;
 
 const tab = css`
   font-size: 16px;
   line-height: 24px;
-  color: ${Colors.primary};
+  color: ${Colors.PRIMARY};
   border-bottom: 2px solid transparent;
   &:hover {
-    border-bottom: 2px solid ${Colors.primary};
+    border-bottom: 2px solid ${Colors.PRIMARY};
   }
   &:active {
-    border-bottom: 2px solid ${Colors.red};
+    border-bottom: 2px solid ${Colors.RED};
   }
 `;
 
 const link = css`
   font-size: 16px;
   line-height: 24px;
-  color: ${Colors.primary};
+  color: ${Colors.PRIMARY};
 `;
 
 export const typography = {

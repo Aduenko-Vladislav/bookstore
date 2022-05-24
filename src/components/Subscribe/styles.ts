@@ -25,7 +25,7 @@ const Container = styled.div`
 const SubscribeBlock = styled.div`
   padding: 56px 64px;
 
-  background: ${Colors.purple};
+  background: ${Colors.PURPLE};
   ${media.mobile} {
     padding: 24px;
   }
@@ -33,13 +33,13 @@ const SubscribeBlock = styled.div`
 
 const SubscribeTitle = styled.h2`
   ${typography.H2};
-  color: ${Colors.primary};
+  color: ${Colors.PRIMARY};
   text-transform: uppercase;
 `;
 
 const SubscribeSubtitle = styled.p`
   ${typography.S1};
-  color: ${Colors.secondary};
+  color: ${Colors.SECONDARY};
   margin-bottom: 32px;
   ${media.mobile} {
     margin-bottom: 24px;

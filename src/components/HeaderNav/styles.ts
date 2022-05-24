@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Like, Order, User } from "../../assets/svg";
+import { Like, Order, User } from "../../assets/icons";
 import { media } from "../../ui/media";
 
 const StyledHeaderNav = styled.div`

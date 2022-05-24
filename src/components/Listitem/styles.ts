@@ -11,7 +11,7 @@ const StyledListItem = styled.li`
   margin: 0 auto;
   border-radius: 5px;
 
-  background: ${Colors.blue};
+  background: ${Colors.BLUE};
   box-shadow: 0px 4px 20px 0px rgba(34, 60, 80, 0.44);
 
   transition: 0.3s linear;

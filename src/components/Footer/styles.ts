@@ -19,7 +19,7 @@ const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  border-top: 1px solid ${Colors.gray};
+  border-top: 1px solid ${Colors.GRAY};
   ${media.mobile} {
     display: block;
   }

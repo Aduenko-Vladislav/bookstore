@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LogoIcon } from "../../assets/svg";
+import { LogoIcon } from "../../assets/icons";
 import { Colors } from "../../ui/colors";
 
 const StyledHeader = styled.header`
@@ -19,7 +19,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 24px 0;
 
-  border-bottom: 1px solid ${Colors.gray};
+  border-bottom: 1px solid ${Colors.GRAY};
 `;
 
 const Logo = styled(LogoIcon)`

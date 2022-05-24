@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Back } from "../../assets/svg";
+import { Back } from "../../assets/icons";
 
 export const StyledBackButton = styled(Back)`
   margin-bottom: 32px;

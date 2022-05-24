@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { Search } from "../../assets/svg";
+import { Search } from "../../assets/icons";
 
 import { SearchInput, SearchFindButton, StyledHeaderForm } from "./styles";
 

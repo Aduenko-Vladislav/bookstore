@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Down } from "../../assets/svg";
+import { Down } from "../../assets/icons";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 import { Link } from "react-scroll";
@@ -16,7 +16,7 @@ const BookImageContainer = styled.div`
   padding: 61px 0px;
   margin-right: 128px;
 
-  background-color: ${Colors.orange};
+  background-color: ${Colors.ORANGE};
 `;
 
 const BookImage = styled.img`
@@ -28,7 +28,7 @@ const BookInfoContainer = styled.div`
   max-width: 448px;
   width: 100%;
 
-  border-top: 1px solid ${Colors.gray};
+  border-top: 1px solid ${Colors.GRAY};
 `;
 const RateContainer = styled.div`
   display: flex;
@@ -98,7 +98,7 @@ const StyledLink = styled(Link)`
   align-items: center;
 
   text-decoration: none;
-  color: ${Colors.primary};
+  color: ${Colors.PRIMARY};
 `;
 
 const TabContainer = styled.div`
@@ -109,7 +109,7 @@ const TabContainer = styled.div`
   width: 100%;
   margin-bottom: 48px;
 
-  border-bottom: 1px solid ${Colors.gray};
+  border-bottom: 1px solid ${Colors.GRAY};
 `;
 
 const Tab = styled.button`
