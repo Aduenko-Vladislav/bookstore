@@ -6,6 +6,7 @@ const H1 = css`
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
+  text-transform: capitalize
 
   ${media.mobile} {
     font-size: 32px;

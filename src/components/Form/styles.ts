@@ -16,7 +16,7 @@ const StyledForm = styled.form`
 
 const SearchInput = styled.input`
   ${typography.input}
-  max-width: 515px;
+  max-width: 480px;
   width: 100%;
 `;
 

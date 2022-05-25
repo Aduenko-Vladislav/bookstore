@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { IDetailsBookApi } from "../../services/types";
 import Subscribe from "../Subscribe/Subscribe";
 import {
@@ -27,6 +28,10 @@ interface IBookDetails {
 
 const Book = ({ book }: IBookDetails) => {
   const previews = book.pdf ? Object.values(book.pdf) : [];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

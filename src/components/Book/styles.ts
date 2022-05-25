@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Down } from "../../assets/svg";
+import { Down } from "../../assets/icons";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 import { Link } from "react-scroll";

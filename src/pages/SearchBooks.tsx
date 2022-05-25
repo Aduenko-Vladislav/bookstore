@@ -24,7 +24,7 @@ export const SearchBooks = () => {
   return (
     <>
       <BackButton onClick={handleBack} />
-      <Title>"{title}" Search results</Title>
+      <Title> Search results: "{title}"</Title>
       <BookList books={searchResult?.books ? searchResult?.books : []} />
     </>
   );
