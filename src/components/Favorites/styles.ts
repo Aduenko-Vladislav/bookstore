@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 
-export const StyledFavoritesButton = styled.button`
+export const StyledFavorites = styled.div`
   ${typography.button}
-
   background-color: ${Colors.PRIMARY};
   &:hover {
     path {

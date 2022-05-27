@@ -1,5 +1,5 @@
 import { INewBookApi } from "../../services/types";
-import { FavoritesButton } from "../FavoritesButton/FavoritesButton";
+import { Favorites } from "../Favorites/Favorites";
 import {
   BookPrice,
   BookSubtitle,
@@ -19,7 +19,7 @@ export const BookItem = ({ book }: IBookItem) => {
     <StyledBookItem>
       <StyledLink to={`/bookstore/books/${book.isbn13}`}>
         <FavoritesContainer>
-          <FavoritesButton />
+          <Favorites/>
         </FavoritesContainer>
         <StyledImg src={book.image} alt={book.title} />
         <BookTitle>{book.title}</BookTitle>
