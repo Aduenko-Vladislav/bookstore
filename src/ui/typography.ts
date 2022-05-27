@@ -64,7 +64,7 @@ const button = css`
   background-color: ${Colors.PRIMARY};
   &:hover,
   :active {
-    background-color: ${Colors.ELEMENTARY};
+    background-color: ${Colors.PRIMARYLIGHT};
   }
   ${media.tablet} {
     font-size: 18px;
