@@ -51,7 +51,8 @@ const SubscribeForm = styled.div`
   background-color: ${Colors.WHITE};
   border-radius: 2px;
   ${media.mobile} {
-    display: block;
+    flex-direction: column;
+    row-gap: 10px;
   }
 `;
 
@@ -64,8 +65,7 @@ const SubscribeInput = styled.input`
     max-width: 608px;
   }
   ${media.mobile} {
-    max-width: 224px;
-    margin-bottom: 24px;
+    max-width: 254px;
   }
 `;
 
@@ -77,7 +77,7 @@ const SubscribeButton = styled.button`
     max-width: 608px;
   }
   ${media.mobile} {
-    max-width: 224px;
+    width: 100%;
     padding: 16px 57px;
   }
 `;

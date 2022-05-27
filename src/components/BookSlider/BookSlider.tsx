@@ -20,10 +20,10 @@ export const BookSlider = ({ books }: IBookSlider) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 1000,
-    cssEase: "linear",
+    autoplaySpeed: 2000,
     pauseOnHover: true,
+  
+
   };
 
   return (
@@ -32,7 +32,7 @@ export const BookSlider = ({ books }: IBookSlider) => {
       <Slider {...settings}>
         {books.slice(7, 18).map((book) => {
           return (
-            <SlideContainer>
+            <SlideContainer key={book.isbn13}>
               <StyledLink to={`/bookstore/books/${book.isbn13}`}>
                 <CustomSlide>
                   <img src={book.image} alt={book.title} />

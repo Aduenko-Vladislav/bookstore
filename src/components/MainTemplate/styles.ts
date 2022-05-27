@@ -7,7 +7,7 @@ export const StyledApp = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 1120px;
+  max-width: 1152px;
   padding: 0 16px;
   width: 100%;
   margin: 0 auto;
