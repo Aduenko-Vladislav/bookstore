@@ -62,7 +62,7 @@ const BookPrice = styled.p`
   padding: 0 10px 10px;
 `;
 
-const FavoritesContainer = styled.button`
+const HeardContainer = styled.button`
   position: absolute;
   right: 0;
   top: 0;
@@ -75,5 +75,5 @@ export {
   BookSubtitle,
   BookPrice,
   StyledImg,
-  FavoritesContainer,
+  HeardContainer,
 };

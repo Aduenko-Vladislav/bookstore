@@ -5,7 +5,7 @@ interface IBackButton {
 }
 
 export const BackButton = ({ onClick }: IBackButton) => {
-  return <StyledBackButton onClick={onClick} />;
+  return <StyledBackButton type="button" onClick={onClick} />;
 };
 
 export default BackButton;

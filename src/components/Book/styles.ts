@@ -16,7 +16,15 @@ const BookImageContainer = styled.div`
   padding: 61px 0px;
   margin-right: 128px;
 
+  position: relative;
   background-color: ${Colors.ORANGE};
+`;
+
+const HeardContainer = styled.button`
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
 `;
 
 const BookImage = styled.img`
@@ -163,4 +171,5 @@ export {
   DetailsList,
   Container,
   PreviewButton,
+  HeardContainer,
 };

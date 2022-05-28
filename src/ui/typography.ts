@@ -6,8 +6,7 @@ const H1 = css`
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
-  text-transform: capitalize
-
+  text-transform: capitalize;
   ${media.mobile} {
     font-size: 32px;
     line-height: 44px;
@@ -53,7 +52,7 @@ const B2 = css`
 
 const button = css`
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 14px 16px;
 
   font-size: 24px;
   font-weight: 700;

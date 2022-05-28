@@ -24,17 +24,19 @@ const StyledLink = styled(Link)`
   height: 56px;
 `;
 
-const NavIconLike = styled(Like)`
+const NavIconFavorites = styled(Like)`
   width: 24px;
   height: 24px;
 `;
+
 const NavIconOrder = styled(Order)`
   width: 24px;
   height: 24px;
 `;
+
 const NavIconUser = styled(User)`
   width: 24px;
   height: 24px;
 `;
 
-export { NavIconLike, StyledLink, StyledNav, NavIconOrder, NavIconUser };
+export { NavIconFavorites, StyledLink, StyledNav, NavIconOrder, NavIconUser };

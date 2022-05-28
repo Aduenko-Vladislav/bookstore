@@ -1,5 +1,6 @@
+import { routes } from "../../routes/routes";
 import {
-  NavIconLike,
+  NavIconFavorites,
   NavIconOrder,
   NavIconUser,
   StyledLink,
@@ -8,8 +9,8 @@ import {
 export const Nav = () => {
   return (
     <StyledNav>
-      <StyledLink to="/">
-        <NavIconLike />
+      <StyledLink to={routes.FAVORITES}>
+        <NavIconFavorites />
       </StyledLink>
       <StyledLink to="/">
         <NavIconOrder />

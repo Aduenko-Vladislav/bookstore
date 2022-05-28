@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { IDetailsBookApi } from "../../services/types";
+import { Heard } from "../Heard/Heard";
 import Subscribe from "../Subscribe/Subscribe";
 import {
   StyledBook,
@@ -21,6 +22,7 @@ import {
   Description,
   DetailsList,
   PreviewButton,
+  HeardContainer,
 } from "./styles";
 interface IBookDetails {
   book: IDetailsBookApi;
@@ -37,6 +39,9 @@ const Book = ({ book }: IBookDetails) => {
     <>
       <StyledBook>
         <BookImageContainer>
+          <HeardContainer>
+            <Heard />
+          </HeardContainer>
           <BookImage src={book.image} alt={book.title} />
         </BookImageContainer>
         <BookInfoContainer>

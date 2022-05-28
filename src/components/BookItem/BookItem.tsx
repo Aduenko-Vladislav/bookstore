@@ -1,5 +1,8 @@
 import { INewBookApi } from "../../services/types";
-import { Favorites } from "../Favorites/Favorites";
+import { useAppDispatch } from "../../store/hooks/hooks";
+import { addFavotites } from "../../store/slice/userSlice";
+import { IBook } from "../../store/types";
+import { Heard } from "../Heard/Heard";
 import {
   BookPrice,
   BookSubtitle,
@@ -7,7 +10,7 @@ import {
   StyledImg,
   StyledLink,
   StyledBookItem,
-  FavoritesContainer,
+  HeardContainer,
 } from "./styles";
 
 interface IBookItem {
@@ -15,12 +18,17 @@ interface IBookItem {
 }
 
 export const BookItem = ({ book }: IBookItem) => {
+  const dispatch = useAppDispatch();
+
+  const handleFavorites = (book: IBook) => {
+    dispatch(addFavotites(book));
+  };
   return (
-    <StyledBookItem>
+    <StyledBookItem key={book.isbn13}>
+      <HeardContainer type="button" onClick={() => handleFavorites(book)}>
+        <Heard />
+      </HeardContainer>
       <StyledLink to={`/bookstore/books/${book.isbn13}`}>
-        <FavoritesContainer>
-          <Favorites/>
-        </FavoritesContainer>
         <StyledImg src={book.image} alt={book.title} />
         <BookTitle>{book.title}</BookTitle>
         <BookSubtitle>{book.subtitle}</BookSubtitle>

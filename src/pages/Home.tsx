@@ -5,8 +5,12 @@ import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
 import { bookApi } from "../services/bookService";
 import { INewBooksApi } from "../services/types";
+import { getBooks } from "../store/selectors/bookSelectors";
+import { useAppSelector } from "../store/hooks/hooks";
 
 export const Home = () => {
+  const books = useAppSelector(getBooks);
+
   const [newBooks, setNewBooks] = useState<INewBooksApi>({
     books: [],
     error: "",

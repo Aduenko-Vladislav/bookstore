@@ -4,7 +4,7 @@ interface ISvgSelectors {
 
 const SvgSelectors = ({ id }: ISvgSelectors) => {
   switch (id) {
-    case "favorites":
+    case "heard":
       return (
         <svg
         width="24" 
