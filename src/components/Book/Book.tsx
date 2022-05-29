@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { IDetailsBookApi } from "../../services/types";
+import { useAppDispatch } from "../../store/hooks/hooks";
+import { addFavotites } from "../../store/slice/userSlice";
+import { IBook } from "../../store/types";
 import { Heard } from "../Heard/Heard";
 import Subscribe from "../Subscribe/Subscribe";
 import {
@@ -35,11 +38,17 @@ const Book = ({ book }: IBookDetails) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const dispatch = useAppDispatch();
+
+  const handleFavorites = (book: IBook) => {
+    dispatch(addFavotites(book));
+  }
+
   return (
     <>
       <StyledBook>
         <BookImageContainer>
-          <HeardContainer>
+          <HeardContainer type="button" onClick={() => handleFavorites(book)}>
             <Heard />
           </HeardContainer>
           <BookImage src={book.image} alt={book.title} />

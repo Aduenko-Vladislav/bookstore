@@ -35,13 +35,15 @@ const FavoritesTitle = styled.p`
 
 const FavoritesSubtitle = styled.p`
   ${typography.B2};
-  margin: 15px 0;
+  margin-bottom: 15px;
   padding: 0 10px;
 `;
 
 const FavoritesPrice = styled.p`
   ${typography.H3};
+  align-content: flex-end;
 
+  margin-top: auto;
   padding: 0 10px 10px;
 `;
 
