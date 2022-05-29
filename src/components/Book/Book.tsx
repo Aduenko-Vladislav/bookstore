@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
+import { StarBlack, StarLight } from "../../assets/icons";
 import { IDetailsBookApi } from "../../services/types";
 import { useAppDispatch } from "../../store/hooks/hooks";
 import { addFavotites } from "../../store/slice/userSlice";
@@ -38,6 +39,19 @@ const Book = ({ book }: IBookDetails) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const drawRating = (rating: string): ReactNode[] => {
+    /// пишет что нет уникального ключа ??
+    const stars = [];
+    for (let i = 0; i <= 4; i++) {
+      if (i < +rating) {
+        stars.push(<StarBlack key={`${[i]}`} />);
+      } else {
+        stars.push(<StarLight key={`${[i]}`} />);
+      }
+    }
+    return stars;
+  };
+
   const dispatch = useAppDispatch();
   const handleFavorites = (book: IBook) => {
     dispatch(addFavotites(book));
@@ -57,7 +71,7 @@ const Book = ({ book }: IBookDetails) => {
             <BookPrice>
               {book.price === "$0.00" ? "Free for you" : book.price}
             </BookPrice>
-            <BookRating>{book.rating}</BookRating>
+            <BookRating>{drawRating(`${book.rating}`)}</BookRating>
           </RateContainer>
           <InfoList>
             <Parameters>Authors</Parameters>

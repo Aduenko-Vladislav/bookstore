@@ -6,5 +6,18 @@ import { ReactComponent as Order } from "./shopping-bag.svg";
 import { ReactComponent as User } from "./user.svg";
 import { ReactComponent as Down } from "./arrow-down.svg";
 import { ReactComponent as Heart } from "./heart.svg";
+import { ReactComponent as StarLight } from "./star-light.svg";
+import { ReactComponent as StarBlack } from "./star-black.svg";
 
-export { Back, Like, LogoIcon, Search, Order, User, Down, Heart };
+export {
+  Back,
+  Like,
+  LogoIcon,
+  Search,
+  Order,
+  User,
+  Down,
+  Heart,
+  StarLight,
+  StarBlack,
+};
