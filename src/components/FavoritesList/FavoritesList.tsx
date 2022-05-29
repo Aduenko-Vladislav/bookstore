@@ -1,12 +1,16 @@
-import { useAppSelector } from "../../store/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getUserInfo } from "../../store/selectors/userSelectors";
-import { Container } from "../MainTemplate/styles";
+import { removeFavorite } from "../../store/slice/userSlice";
+import { IBook } from "../../store/types";
+import { HeardRemove } from "../HeardRemove/HeardRemove";
 import {
+  Container,
   DescriptionContainer,
   FavoritesImg,
   FavoritesPrice,
   FavoritesSubtitle,
   FavoritesTitle,
+  RemoveContainer,
   StyledFavoritesList,
   StyledLink,
 } from "./styles";
@@ -14,6 +18,10 @@ import {
 export const FavoritesList = () => {
   const { favorites } = useAppSelector(getUserInfo);
 
+  const dispatch = useAppDispatch();
+  const handleRemoveFavorite = (book: IBook) => {
+    dispatch(removeFavorite(book));
+  };
   return (
     <StyledFavoritesList>
       {favorites.map((book) => {
@@ -29,6 +37,12 @@ export const FavoritesList = () => {
                 </FavoritesPrice>
               </DescriptionContainer>
             </StyledLink>
+            <RemoveContainer
+              type="button"
+              onClick={() => handleRemoveFavorite(book)}
+            >
+              <HeardRemove />
+            </RemoveContainer>
           </Container>
         );
       })}

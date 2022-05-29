@@ -39,14 +39,13 @@ const Book = ({ book }: IBookDetails) => {
   }, []);
 
   const dispatch = useAppDispatch();
-
   const handleFavorites = (book: IBook) => {
     dispatch(addFavotites(book));
-  }
+  };
 
   return (
     <>
-      <StyledBook>
+      <StyledBook key={book.isbn13}>
         <BookImageContainer>
           <HeardContainer type="button" onClick={() => handleFavorites(book)}>
             <Heard />

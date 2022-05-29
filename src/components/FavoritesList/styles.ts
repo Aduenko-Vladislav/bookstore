@@ -8,23 +8,32 @@ const StyledFavoritesList = styled.div`
   flex-direction: column;
 `;
 
-const StyledLink = styled(Link)`
-  display: flex;
+const Container = styled.div`
+  position: relative;
+
   margin-bottom: 20px;
 
   border-bottom: 1px solid ${Colors.GRAY};
 `;
 
+const StyledLink = styled(Link)`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  max-width: 450px;
+  width: 100%;
 `;
 
 const FavoritesImg = styled.img`
   background: ${Colors.BLUE};
   max-width: 226px;
   width: 100%;
-  margin: 0 63px;
+  margin: 0 63px 20px;
 `;
 
 const FavoritesTitle = styled.p`
@@ -43,8 +52,14 @@ const FavoritesPrice = styled.p`
   ${typography.H3};
   align-content: flex-end;
 
-  margin-top: auto;
-  padding: 0 10px 10px;
+  margin: auto 0 20px;
+  padding-left: 10px;
+`;
+
+const RemoveContainer = styled.button`
+  position: absolute;
+  right: 100px;
+  top: 70px;
 `;
 
 export {
@@ -55,4 +70,6 @@ export {
   StyledLink,
   DescriptionContainer,
   FavoritesSubtitle,
+  Container,
+  RemoveContainer,
 };

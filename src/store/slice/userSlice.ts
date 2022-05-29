@@ -16,8 +16,13 @@ const userSlice = createSlice({
         ...state.favorites.filter((item) => item.isbn13 !== payload.isbn13),
       ];
     },
+    removeFavorite: (state, { payload }: PayloadAction<IBook>) => {
+      state.favorites = state.favorites.filter(
+        (item) => item.isbn13 !== payload.isbn13
+      );
+    },
   },
 });
 export default userSlice.reducer;
 
-export const { addFavotites } = userSlice.actions;
+export const { addFavotites, removeFavorite } = userSlice.actions;
