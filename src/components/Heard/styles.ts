@@ -5,6 +5,7 @@ import { typography } from "../../ui/typography";
 export const StyledHeard = styled.div`
   ${typography.button}
   background-color: ${Colors.PRIMARY};
+  transition: .3s linear;
   &:hover {
     path {
       stroke: ${Colors.RED};

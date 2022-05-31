@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton/BackButton";
 import { FavoritesList } from "../components/FavoritesList/FavoritesList";

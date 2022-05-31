@@ -61,6 +61,7 @@ const button = css`
   text-transform: uppercase;
   color: ${Colors.WHITE};
   background-color: ${Colors.PRIMARY};
+  transition: 0.3s linear;
   &:hover,
   :active {
     background-color: ${Colors.PRIMARYLIGHT};
@@ -82,6 +83,7 @@ const tab = css`
   line-height: 24px;
   color: ${Colors.PRIMARY};
   border-bottom: 2px solid transparent;
+  transition: .3s linear;
   &:hover {
     border-bottom: 2px solid ${Colors.PRIMARY};
   }
