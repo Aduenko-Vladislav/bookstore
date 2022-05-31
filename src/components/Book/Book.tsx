@@ -6,6 +6,7 @@ import { addFavotites } from "../../store/slice/userSlice";
 import { IBook } from "../../store/types";
 import { Heard } from "../Heard/Heard";
 import Subscribe from "../Subscribe/Subscribe";
+import { v4 as uuidv4 } from "uuid";
 import {
   StyledBook,
   BookImageContainer,
@@ -40,13 +41,14 @@ const Book = ({ book }: IBookDetails) => {
   }, []);
 
   const drawRating = (rating: string): ReactNode[] => {
-    /// пишет что нет уникального ключа ??
     const stars = [];
+    let id = {};
     for (let i = 0; i <= 4; i++) {
+      id = uuidv4();
       if (i < +rating) {
-        stars.push(<StarBlack key={`${[i]}`} />);
+        stars.push(<StarBlack key={`${id}`} />);
       } else {
-        stars.push(<StarLight key={`${[i]}`} />);
+        stars.push(<StarLight key={`${id}`} />);
       }
     }
     return stars;
@@ -93,7 +95,9 @@ const Book = ({ book }: IBookDetails) => {
           </ButtonDetails>
           <AddButton>add to cart</AddButton>
           {previews.map((preview) => (
-            <PreviewButton href={preview}>Preview book</PreviewButton>
+            <PreviewButton href={preview} key={book.isbn13}>
+              Preview book
+            </PreviewButton>
           ))}
         </BookInfoContainer>
       </StyledBook>
