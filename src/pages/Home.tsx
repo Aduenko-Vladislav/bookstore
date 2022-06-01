@@ -5,11 +5,27 @@ import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
 import { bookApi } from "../services/bookService";
 import { INewBooksApi } from "../services/types";
-import { getBooks } from "../store/selectors/bookSelectors";
-import { useAppSelector } from "../store/hooks/hooks";
 
 export const Home = () => {
-  const books = useAppSelector(getBooks);
+  // const newBooks = useAppSelector(getNewBooks);
+  // const status = useAppSelector(getNewBooksStatus);
+  // const error = useAppSelector(getNewBooksError);
+  // const dispatch = useAppDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchNewBook());
+  // }, [dispatch]);
+
+  // if (status === "loading") {
+  //   return <div>Loading...</div>;
+  // }
+
+  // if (status === "error") {
+  //   return <div>Error:{error}</div>;
+  // }
+bookApi.getNewBooks().then(res =>{
+  console.log(res);
+  
+})
 
   const [newBooks, setNewBooks] = useState<INewBooksApi>({
     books: [],

@@ -1,20 +1,38 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IBook } from "../types";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { bookApi } from "../../services/bookService";
+import { INewBooksApi } from "../../services/types";
+import { INewBooklopata } from "../types";
 
-const initialState: IBook[] = [
-  {
-    image: "https://itbook.store/img/books/9781642002133.png",
-    isbn13: "9781642002133",
-    price: "$0.00",
-    subtitle: "",
-    title: "Azure Pipelines Succinctly",
-    url: "https://itbook.store/books/9781642002133",
-  },
-];
+const initialState: INewBooklopata = {
+  books: [],
+  error: null,
+  status: "idle",
+};
+
+export const fetchNewBook = createAsyncThunk<INewBooksApi>(
+  "book/fetchNewBook",
+  async () => {
+    return bookApi.getNewBooks();
+  }
+);
 
 const bookSlice = createSlice({
   name: "book",
   initialState,
   reducers: {},
+  // extraReducers: (builder) => {
+  //   builder.addCase(fetchNewBook.pending, (state) => {
+  //     state.status = "loading";
+  //     state.error = null;
+  //   });
+  //   builder.addCase(fetchNewBook.fulfilled, (state, { payload }) => {
+  //     state.status = "success";
+  //     state.books = payload;
+  //   });
+  //   builder.addCase(fetchNewBook.rejected, (state, { payload }) => {
+  //     state.status = "error";
+  //     state.error = payload;
+  //   });
+  // },
 });
 export default bookSlice.reducer;
