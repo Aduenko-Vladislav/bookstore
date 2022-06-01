@@ -5,6 +5,7 @@ import BackButton from "../components/BackButton/BackButton";
 import { Title } from "../components/Title/Title";
 import { bookApi } from "../services/bookService";
 import { ISearchBooksApi } from "../services/types";
+import Pagination from "../components/Pagination/Pagination";
 
 export const SearchBooks = () => {
   const { title = "", page = "" } = useParams();
@@ -26,6 +27,7 @@ export const SearchBooks = () => {
       <BackButton onClick={handleBack} />
       <Title> Search results: "{title}"</Title>
       <BookList books={searchResult?.books ? searchResult?.books : []} />
+      <Pagination />
     </>
   );
 };
