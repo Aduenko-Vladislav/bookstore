@@ -75,7 +75,7 @@ const Book = ({ book }: IBookDetails) => {
         <BookInfoContainer>
           <RateContainer>
             <BookPrice>
-              {book.price === "$0.00" ? "Free for you" : book.price}
+              {book.price === "$0.00" ? "Not Available" : book.price}
             </BookPrice>
             <BookRating>{drawRating(`${book.rating}`)}</BookRating>
           </RateContainer>

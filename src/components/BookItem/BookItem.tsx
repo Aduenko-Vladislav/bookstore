@@ -33,7 +33,7 @@ export const BookItem = ({ book }: IBookItem) => {
         <BookTitle>{book.title}</BookTitle>
         <BookSubtitle>{book.subtitle}</BookSubtitle>
         <BookPrice>
-          {book.price === "$0.00" ? "Free for you" : book.price}
+          {book.price === "$0.00" ? "Not Available" : book.price}
         </BookPrice>
       </StyledLink>
     </StyledBookItem>
