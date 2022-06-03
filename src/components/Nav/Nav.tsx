@@ -12,7 +12,7 @@ export const Nav = () => {
       <StyledLink to={routes.FAVORITES}>
         <NavIconFavorites />
       </StyledLink>
-      <StyledLink to="/">
+      <StyledLink to={routes.CART}>
         <NavIconOrder />
       </StyledLink>
       <StyledLink to="/">

@@ -2,8 +2,8 @@ import { ReactNode, useEffect } from "react";
 import { StarBlack, StarLight } from "../../assets/icons";
 import { IDetailsBookApi } from "../../services/types";
 import { useAppDispatch } from "../../store/hooks/hooks";
-import { addFavotites } from "../../store/slice/userSlice";
-import { IBook } from "../../store/types";
+import { addFavotites } from "../../store/slices/userSlice";
+import { IBook, IDetailsBook } from "../../store/types";
 import { Heard } from "../Heard/Heard";
 import Subscribe from "../Subscribe/Subscribe";
 import { v4 as uuidv4 } from "uuid";
@@ -29,6 +29,7 @@ import {
   PreviewButton,
   HeardContainer,
 } from "./styles";
+import { addCart } from "../../store/slices/cartSlice";
 interface IBookDetails {
   book: IDetailsBookApi;
 }
@@ -53,8 +54,13 @@ const Book = ({ book }: IBookDetails) => {
     }
     return stars;
   };
-
   const dispatch = useAppDispatch();
+  const handleCart = (book: IDetailsBook) => {
+    dispatch(addCart(book));
+    console.log(book);
+  };
+ 
+
   const handleFavorites = (book: IBook) => {
     dispatch(addFavotites(book));
   };
@@ -93,7 +99,9 @@ const Book = ({ book }: IBookDetails) => {
               <ArrowDown />
             </StyledLink>
           </ButtonDetails>
-          <AddButton>add to cart</AddButton>
+          <AddButton type="button" onClick={() => handleCart(book)}>
+            add to cart
+          </AddButton>
           {previews.map((preview) => (
             <PreviewButton href={preview} key={book.isbn13}>
               Preview book

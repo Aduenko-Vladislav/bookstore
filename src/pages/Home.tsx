@@ -22,10 +22,9 @@ export const Home = () => {
   // if (status === "error") {
   //   return <div>Error:{error}</div>;
   // }
-bookApi.getNewBooks().then(res =>{
-  console.log(res);
-  
-})
+  // bookApi.getNewBooks().then((res) => {
+  //   console.log(res);
+  // });
 
   const [newBooks, setNewBooks] = useState<INewBooksApi>({
     books: [],

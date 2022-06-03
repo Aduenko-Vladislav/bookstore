@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getUserInfo } from "../../store/selectors/userSelectors";
-import { removeFavorite } from "../../store/slice/userSlice";
+import { removeFavorite } from "../../store/slices/userSlice";
 import { IBook } from "../../store/types";
 import { HeardRemove } from "../HeardRemove/HeardRemove";
 import {

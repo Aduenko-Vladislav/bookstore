@@ -1,6 +1,6 @@
 import { INewBookApi } from "../../services/types";
 import { useAppDispatch } from "../../store/hooks/hooks";
-import { addFavotites } from "../../store/slice/userSlice";
+import { addFavotites } from "../../store/slices/userSlice";
 import { IBook } from "../../store/types";
 import { Heard } from "../Heard/Heard";
 import {
