@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ICart, IDetailsBook } from "../types";
+import { ICart, ICartInfo } from "../types";
 
 const initialState: ICart = {
   cart: [],
@@ -9,10 +9,10 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addCart: (state, actions: PayloadAction<IDetailsBook>) => {
+    addCart: (state, actions: PayloadAction<ICartInfo>) => {
       state.cart.push(actions.payload);
     },
-    removeCart: (state, { payload }: PayloadAction<IDetailsBook>) => {
+    removeCart: (state, { payload }: PayloadAction<ICartInfo>) => {
       state.cart = state.cart.filter((item) => item.isbn13 !== payload.isbn13);
     },
   },

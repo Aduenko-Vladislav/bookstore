@@ -1,3 +1,3 @@
 import { RootState } from "../store";
 
-export const getCart = (state: RootState) => state.cart;
+export const getCartInfo = (state: RootState) => state.cart;

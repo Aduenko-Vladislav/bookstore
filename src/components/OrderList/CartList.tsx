@@ -1,7 +1,8 @@
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
-import { getCart } from "../../store/selectors/cartSelectors";
+import { getCartInfo } from "../../store/selectors/cartSelectors";
 import { removeCart } from "../../store/slices/cartSlice";
-import { IDetailsBook } from "../../store/types";
+import { ICartInfo } from "../../store/types";
+
 import { HeardRemove } from "../HeardRemove/HeardRemove";
 import {
   CartImg,
@@ -16,15 +17,15 @@ import {
 } from "./styles";
 
 export const CartList = () => {
-  const { cart } = useAppSelector(getCart);
+  const { cart } = useAppSelector(getCartInfo);
 
   const dispatch = useAppDispatch();
-  const handleRemoveCart = (book: IDetailsBook) => {
+  const handleRemoveCart = (book: ICartInfo) => {
     dispatch(removeCart(book));
   };
   return (
     <StyledCartList>
-      {cart.map((book: IDetailsBook) => {
+      {cart.map((book: ICartInfo) => {
         return (
           <Container key={book.isbn13}>
             <StyledLink to={`/bookstore/books/${book.isbn13}`}>

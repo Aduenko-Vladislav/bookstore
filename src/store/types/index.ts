@@ -31,27 +31,19 @@ export interface IUser {
   favorites: IBook[];
 }
 
-export interface IDetailsBook {
-  authors: string;
-  desc: string;
-  error: string;
+export interface ICartInfo {
   image: string;
-  isbn10: string;
   isbn13: string;
-  language: string;
-  pages: string;
-  pdf: {
-    [key: string]: string;
-  };
   price: string;
-  publisher: string;
-  rating: string;
   subtitle: string;
   title: string;
   url: string;
   year: string;
+  publisher: string;
+  rating: string;
+  authors: string;
 }
 
 export interface ICart {
-  cart: IDetailsBook[];
+  cart: ICartInfo[];
 }
