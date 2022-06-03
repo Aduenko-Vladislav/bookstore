@@ -1,3 +1,4 @@
+import { Delete } from "../../assets/icons";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getCartInfo } from "../../store/selectors/cartSelectors";
 import { removeCart } from "../../store/slices/cartSlice";
@@ -33,19 +34,22 @@ export const CartList = () => {
               <DescriptionContainer>
                 <CartTitle>{book.title}</CartTitle>
                 <CartSubtitle>
-                  {book.subtitle}, {book.publisher}
-                  {book.year}
+                  {book.subtitle === "" ? "" : `${book.subtitle}, `}
                 </CartSubtitle>
-                <CartPrice>
-                  {book.price === "$0.00" ? "Free for you" : book.price}
-                </CartPrice>
+                <CartSubtitle>
+                  {book.publisher} {book.year}
+                </CartSubtitle>
               </DescriptionContainer>
+              <CartPrice>
+                {book.price === "$0.00" ? "Not Available" : book.price}
+              </CartPrice>
             </StyledLink>
+
             <RemoveContainer
               type="button"
               onClick={() => handleRemoveCart(book)}
             >
-              <HeardRemove />
+              <Delete />
             </RemoveContainer>
           </Container>
         );

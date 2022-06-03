@@ -8,6 +8,7 @@ import { ReactComponent as Down } from "./arrow-down.svg";
 import { ReactComponent as Heart } from "./heart.svg";
 import { ReactComponent as StarLight } from "./star-light.svg";
 import { ReactComponent as StarBlack } from "./star-black.svg";
+import { ReactComponent as Delete } from "./delete.svg";
 
 export {
   Back,
@@ -20,4 +21,5 @@ export {
   Heart,
   StarLight,
   StarBlack,
+  Delete,
 };

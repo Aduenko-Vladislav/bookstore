@@ -11,6 +11,7 @@ const StyledCartList = styled.div`
 
 const Container = styled.div`
   position: relative;
+  margin: 0 auto;
 
   margin-bottom: 20px;
   border-bottom: 1px solid ${Colors.GRAY};
@@ -28,8 +29,12 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  max-width: 450px;
-  width: 100%;
+  width: 450px;
+
+  margin-right: 90px;
+  ${media.tablet} {
+    margin-right: 0px;
+  }
 `;
 
 const CartImg = styled.img`
@@ -60,20 +65,15 @@ const CartSubtitle = styled.p`
 
 const CartPrice = styled.p`
   ${typography.H3};
-  align-content: flex-end;
-
-  margin: auto 0 20px;
-  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const RemoveContainer = styled.button`
   position: absolute;
-  right: 100px;
-  top: 70px;
-  ${media.tablet} {
-    right: 0;
-    top: 0;
-  }
+  right: 0;
+  top: 0;
 `;
 
 export {

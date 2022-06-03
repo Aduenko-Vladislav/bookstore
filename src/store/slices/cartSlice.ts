@@ -9,8 +9,11 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addCart: (state, actions: PayloadAction<ICartInfo>) => {
-      state.cart.push(actions.payload);
+    addCart: (state, { payload }: PayloadAction<ICartInfo>) => {
+      state.cart = [
+        { ...payload },
+        ...state.cart.filter((item) => item.isbn13 !== payload.isbn13),
+      ];
     },
     removeCart: (state, { payload }: PayloadAction<ICartInfo>) => {
       state.cart = state.cart.filter((item) => item.isbn13 !== payload.isbn13);
