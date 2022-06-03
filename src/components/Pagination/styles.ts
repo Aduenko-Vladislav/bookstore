@@ -11,12 +11,19 @@ export const StyledPagination = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 100%;
+  max-width: 100%;
+  width: 80px;
 
   font-size: 16px;
   line-height: 32px;
   color: ${Colors.PRIMARYLIGHT};
-  
+  border-bottom: 1px solid ${Colors.RED};
+  &:hover {
+    border-bottom: 1px solid ${Colors.PRIMARY};
+  }
+  &:active {
+    box-shadow: 4px 4px 30px ${Colors.RED}
+  }
 `;
 
 export const Pages = styled.div`
