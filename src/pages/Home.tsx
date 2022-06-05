@@ -5,15 +5,17 @@ import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
 import { bookApi } from "../services/bookService";
 import { INewBooksApi } from "../services/types";
+import { useAppDispatch } from "../store/hooks/hooks";
 
 export const Home = () => {
+  
   // const newBooks = useAppSelector(getNewBooks);
   // const status = useAppSelector(getNewBooksStatus);
   // const error = useAppSelector(getNewBooksError);
-  // const dispatch = useAppDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchNewBook());
-  // }, [dispatch]);
+//  const dispatch = useAppDispatch();
+//   useEffect(() => {
+//     dispatch(fetchNewBook());
+//    }, [dispatch]);
 
   // if (status === "loading") {
   //   return <div>Loading...</div>;

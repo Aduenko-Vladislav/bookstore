@@ -11,13 +11,13 @@ const Pagination = () => {
 
   const handleNextButton = () => {
     if (searchResult?.total && +page < Math.ceil(+searchResult?.total) / 10) {
-      navigation(`/bookstore/bookstore/search/${title}/${Number(page) + 1}`);
+      navigation(`/search/${title}/${Number(page) + 1}`);
     }
   };
 
   const handlePrevButton = () => {
     if (+page > 1) {
-      navigation(`/bookstore/bookstore/search/${title}/${Number(page) - 1}`);
+      navigation(`/search/${title}/${Number(page) - 1}`);
     }
   };
 

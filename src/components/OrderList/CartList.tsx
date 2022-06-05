@@ -29,7 +29,7 @@ export const CartList = () => {
       {cart.map((book: ICartInfo) => {
         return (
           <Container key={book.isbn13}>
-            <StyledLink to={`/bookstore/books/${book.isbn13}`}>
+            <StyledLink to={`/books/${book.isbn13}`}>
               <CartImg src={book.image} alt={book.title} />
               <DescriptionContainer>
                 <CartTitle>{book.title}</CartTitle>

@@ -28,7 +28,7 @@ export const BookItem = ({ book }: IBookItem) => {
       <HeardContainer type="button" onClick={() => handleFavorites(book)}>
         <Heard />
       </HeardContainer>
-      <StyledLink to={`/bookstore/books/${book.isbn13}`}>
+      <StyledLink to={`/books/${book.isbn13}`}>
         <StyledImg src={book.image} alt={book.title} />
         <BookTitle>{book.title}</BookTitle>
         <BookSubtitle>{book.subtitle}</BookSubtitle>

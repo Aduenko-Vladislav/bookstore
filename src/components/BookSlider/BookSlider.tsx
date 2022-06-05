@@ -33,7 +33,7 @@ export const BookSlider = ({ books }: IBookSlider) => {
         {books.slice(7, 18).map((book) => {
           return (
             <SlideContainer key={book.isbn13}>
-              <StyledLink to={`/bookstore/books/${book.isbn13}`}>
+              <StyledLink to={`/books/${book.isbn13}`}>
                 <CustomSlide>
                   <img src={book.image} alt={book.title} />
                   <div>
