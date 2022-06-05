@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { LogoIcon } from "../../assets/icons";
 import { Colors } from "../../ui/colors";
+import { media } from "../../ui/media";
 
 const StyledHeader = styled.header`
   max-width: 1920px;
@@ -26,6 +27,12 @@ const Logo = styled(LogoIcon)`
   display: block;
   margin-right: 10px;
   cursor: pointer;
+  ${media.tablet} {
+    width: 100px;
+  }
+  ${media.mobile} {
+    width: 80px;
+  }
 `;
 
 export { Logo, Container, StyledHeader };

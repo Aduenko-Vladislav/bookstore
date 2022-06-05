@@ -11,12 +11,11 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path={routes.HOME} element={<MainTemplate />}>
-        <Route path={routes.HOME} element={<Home />} />
+        <Route index element={<Home />} />
         <Route path={routes.DETAILS} element={<BookDetails />} />
         <Route path={routes.SEARCH} element={<SearchBooks />} />
         <Route path={routes.FAVORITES} element={<FavoritesBooks />} />
         <Route path={routes.CART} element={<CartBooks />} />
-
       </Route>
     </Routes>
   );

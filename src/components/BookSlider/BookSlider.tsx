@@ -20,10 +20,8 @@ export const BookSlider = ({ books }: IBookSlider) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     pauseOnHover: true,
-  
-
   };
 
   return (
@@ -39,7 +37,7 @@ export const BookSlider = ({ books }: IBookSlider) => {
                   <div>
                     <SliderTitle>{book.title}</SliderTitle>
                     <SliderPrice>
-                      {book.price === "$0.00" ? "Free for you" : book.price}
+                      {book.price === "$0.00" ? "Not Available" : book.price}
                     </SliderPrice>
                   </div>
                 </CustomSlide>

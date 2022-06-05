@@ -11,8 +11,12 @@ const StyledNav = styled.div`
   max-width: 184px;
   width: 100%;
   ${media.tablet} {
-    display: none;
+    max-width: 120px;
   }
+  ${media.mobile} {
+    max-width: 100px;
+  }
+
 `;
 
 const StyledLink = styled(Link)`
@@ -22,21 +26,41 @@ const StyledLink = styled(Link)`
 
   width: 56px;
   height: 56px;
+  ${media.tablet} {
+    width: 36px;
+    height: 36px;
+  }
+  ${media.mobile} {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 const NavIconFavorites = styled(Like)`
   width: 24px;
   height: 24px;
+  ${media.mobile} {
+    width: 18px;
+    height: 18px;
+  }
 `;
 
 const NavIconOrder = styled(Order)`
   width: 24px;
   height: 24px;
+  ${media.mobile} {
+    width: 18px;
+    height: 18px;
+  }
 `;
 
 const NavIconUser = styled(User)`
   width: 24px;
   height: 24px;
+  ${media.mobile} {
+    width: 18px;
+    height: 18px;
+  }
 `;
 
 export { NavIconFavorites, StyledLink, StyledNav, NavIconOrder, NavIconUser };

@@ -28,12 +28,17 @@ const StyledLink = styled(Link)`
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 
   width: 450px;
 
   margin-right: 90px;
   ${media.tablet} {
     margin-right: 0px;
+  }
+  ${media.mobile} {
+    width: 100%;
+    margin-bottom: 30px;
   }
 `;
 
@@ -68,6 +73,11 @@ const CartPrice = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 155px;
+  ${media.mobile} {
+    width: 100%;
+  }
 `;
 
 const RemoveContainer = styled.button`

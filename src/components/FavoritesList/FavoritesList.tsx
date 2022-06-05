@@ -33,7 +33,7 @@ export const FavoritesList = () => {
                 <FavoritesTitle>{book.title}</FavoritesTitle>
                 <FavoritesSubtitle>{book.subtitle}</FavoritesSubtitle>
                 <FavoritesPrice>
-                  {book.price === "$0.00" ? "Free for you" : book.price}
+                  {book.price === "$0.00" ? "Not Available" : book.price}
                 </FavoritesPrice>
               </DescriptionContainer>
             </StyledLink>

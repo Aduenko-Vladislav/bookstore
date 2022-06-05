@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton/BackButton";
-import { CartList } from "../components/OrderList/CartList";
+import { CartList } from "../components/CartList/CartList";
 import { Title } from "../components/Title/Title";
 
 export const CartBooks = () => {
