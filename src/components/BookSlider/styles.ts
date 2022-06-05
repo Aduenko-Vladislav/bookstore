@@ -7,7 +7,6 @@ export const SlideContainer = styled.div`
   ${media.tablet} {
     margin-bottom: 80px;
   }
-
 `;
 
 export const CustomSlide = styled.div`
