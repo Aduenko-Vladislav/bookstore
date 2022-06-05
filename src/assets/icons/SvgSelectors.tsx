@@ -37,7 +37,6 @@ const SvgSelectors = ({ id }: ISvgSelectors) => {
           />
         </svg>
       );
-
     default:
       return <svg></svg>;
   }

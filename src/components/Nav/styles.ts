@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Like, Order, User } from "../../assets/icons";
+import { Circle, Like, Order, User } from "../../assets/icons";
 import { media } from "../../ui/media";
 
 const StyledNav = styled.div`
@@ -16,7 +16,6 @@ const StyledNav = styled.div`
   ${media.mobile} {
     max-width: 100px;
   }
-
 `;
 
 const StyledLink = styled(Link)`
@@ -48,6 +47,7 @@ const NavIconFavorites = styled(Like)`
 const NavIconOrder = styled(Order)`
   width: 24px;
   height: 24px;
+  position: relative;
   ${media.mobile} {
     width: 18px;
     height: 18px;
@@ -63,4 +63,21 @@ const NavIconUser = styled(User)`
   }
 `;
 
-export { NavIconFavorites, StyledLink, StyledNav, NavIconOrder, NavIconUser };
+const StyledCartCircle = styled.div`
+  position: relative;
+`;
+const RedCircle = styled(Circle)`
+  position: absolute;
+  top: -13px;
+  right: 0px;
+`;
+
+export {
+  NavIconFavorites,
+  StyledLink,
+  StyledCartCircle,
+  StyledNav,
+  NavIconOrder,
+  NavIconUser,
+  RedCircle,
+};
