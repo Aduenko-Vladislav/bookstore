@@ -16,7 +16,7 @@ export const Button = styled.button`
 
   font-size: 16px;
   line-height: 32px;
-  color: ${Colors.PRIMARYLIGHT};
+  color: ${Colors.PRIMARY_LIGHT};
   border-bottom: 1px solid ${Colors.RED};
   &:hover {
     border-bottom: 1px solid ${Colors.PRIMARY};

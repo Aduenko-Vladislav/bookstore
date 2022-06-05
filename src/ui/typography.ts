@@ -64,7 +64,8 @@ const button = css`
   transition: 0.3s linear;
   &:hover,
   :active {
-    background-color: ${Colors.PRIMARYLIGHT};
+    background-color: ${Colors.PRIMARY_LIGHT};
+    box-shadow: 4px 4px 30px ${Colors.PRIMARY_LIGHT};
   }
   ${media.tablet} {
     font-size: 18px;
@@ -83,7 +84,7 @@ const tab = css`
   line-height: 24px;
   color: ${Colors.PRIMARY};
   border-bottom: 2px solid transparent;
-  transition: .3s linear;
+  transition: 0.3s linear;
   &:hover {
     border-bottom: 2px solid ${Colors.PRIMARY};
   }

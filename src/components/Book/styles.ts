@@ -8,6 +8,12 @@ import { media } from "../../ui/media";
 const StyledBook = styled.div`
   display: flex;
   margin-bottom: 72px;
+  ${media.tablet} {
+    flex-direction: column;
+  }
+  /* ${media.mobile} {
+    display: block;
+  } */
 `;
 
 const BookImageContainer = styled.div`
@@ -18,6 +24,10 @@ const BookImageContainer = styled.div`
 
   position: relative;
   background-color: ${Colors.ORANGE};
+  ${media.tablet} {
+    max-width: 820px;
+    margin-right: 0;
+  }
 `;
 
 const HeardContainer = styled.button`
@@ -37,6 +47,9 @@ const BookInfoContainer = styled.div`
   width: 100%;
 
   border-top: 1px solid ${Colors.GRAY};
+  ${media.tablet} {
+    max-width: 820px;
+  }
 `;
 const RateContainer = styled.div`
   display: flex;
@@ -51,7 +64,9 @@ const BookPrice = styled.h2`
   ${typography.H2}
 `;
 
-const BookRating = styled.div``;
+const BookRating = styled.div`
+  margin-right: 20px;
+`;
 
 const InfoList = styled.div`
   display: grid;
@@ -68,6 +83,13 @@ const Parameters = styled.p`
 const Attribute = styled.p`
   ${typography.B1}
   line-height: 20px;
+  ${media.mobile} {
+    ${media.mobile} {
+      width: 190px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
 `;
 
 const AddButton = styled.button`
@@ -119,11 +141,18 @@ const TabContainer = styled.div`
   margin-bottom: 48px;
 
   border-bottom: 1px solid ${Colors.GRAY};
+  ${media.mobile} {
+    grid-template-columns: repeat(3, 100px);
+    column-gap: 10px;
+  }
 `;
 
 const Tab = styled.button`
   ${typography.tab}
   padding: 0 40px 24px;
+  ${media.mobile} {
+    padding: 0;
+  }
 `;
 
 const Description = styled.div`
@@ -137,6 +166,9 @@ const DetailsList = styled.div`
   row-gap: 15px;
 
   margin-bottom: 30px;
+  ${media.mobile} {
+    column-gap: 0;
+  }
 `;
 
 const Container = styled.div`
