@@ -1,50 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BookSlider } from "../components/BookSlider/BookSlider";
 import { BookList } from "../components/BookList/BookList";
 import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
-import { bookApi } from "../services/bookService";
-import { INewBooksApi } from "../services/types";
-import { useAppDispatch } from "../store/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks/hooks";
+import { fetchBook } from "../store/slices/bookSlice";
+import { getBooks } from "../store/selectors/bookSelectors";
 
 export const Home = () => {
-  
-  // const newBooks = useAppSelector(getNewBooks);
-  // const status = useAppSelector(getNewBooksStatus);
-  // const error = useAppSelector(getNewBooksError);
-//  const dispatch = useAppDispatch();
-//   useEffect(() => {
-//     dispatch(fetchNewBook());
-//    }, [dispatch]);
-
-  // if (status === "loading") {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (status === "error") {
-  //   return <div>Error:{error}</div>;
-  // }
-  // bookApi.getNewBooks().then((res) => {
-  //   console.log(res);
-  // });
-
-  const [newBooks, setNewBooks] = useState<INewBooksApi>({
-    books: [],
-    error: "",
-    total: "",
-  });
-
+  const dispatch = useAppDispatch();
+  const {books} = useAppSelector(getBooks);
   useEffect(() => {
-    bookApi.getNewBooks().then((books) => {
-      setNewBooks(books);
-    });
-  }, []);
+    dispatch(fetchBook());
+  }, [dispatch]);
+
 
   return (
     <>
-      <BookSlider books={newBooks.books} />
+      <BookSlider books={books} />
       <Title>New Releases Books</Title>
-      <BookList books={newBooks.books} />
+      <BookList books={books} />
       <Subscribe />
     </>
   );

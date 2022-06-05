@@ -1,20 +1,10 @@
 import { RequestStatusType } from "../../config/RequestStatusType";
-import { IDetailsBookApi } from "../../services/types";
 
-export interface INewBook {
-  results: {
-    error: any;
-    total: string;
-    books: IBook[];
-  };
+export interface INewBooks {
   error: any;
-  status: RequestStatusType;
-}
-
-export interface INewBooklopata {
-  error: any;
-  status: RequestStatusType;
   books: IBook[];
+  total: string;
+  status: RequestStatusType;
 }
 
 export interface IBook {
@@ -46,4 +36,8 @@ export interface ICartInfo {
 
 export interface ICart {
   cart: ICartInfo[];
+}
+
+export interface IFavoriteBook {
+  favorites: IBook[];
 }
