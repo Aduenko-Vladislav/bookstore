@@ -35,7 +35,6 @@ import {
   IconTwitter,
 } from "./styles";
 import { addCart } from "../../store/slices/cartSlice";
-import { BookSlider } from "../BookSlider/BookSlider";
 import { getUserInfo } from "../../store/selectors/userSelectors";
 interface IBookDetails {
   book: IDetailsBookApi;

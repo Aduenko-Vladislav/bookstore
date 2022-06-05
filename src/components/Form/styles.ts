@@ -10,7 +10,10 @@ const StyledForm = styled.form`
 
   border: 1px solid #e7e7e7;
   ${media.tablet} {
-    display: none;
+    max-width: 342px;
+  }
+  ${media.mobile} {
+    max-width: 100px;
   }
 `;
 
@@ -25,9 +28,11 @@ const SearchFindButton = styled.button`
   right: 16px;
   top: 16px;
 
-  max-width: 24px;
   width: 24px;
   height: 24px;
+  ${media.mobile} {
+    display: none;
+  }
 `;
 
 export { SearchFindButton, SearchInput, StyledForm };
