@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import { Down } from "../../assets/icons";
+import { Down, Facebook, Twitter } from "../../assets/icons";
 import { Colors } from "../../ui/colors";
 import { typography } from "../../ui/typography";
 import { Link } from "react-scroll";
 import { media } from "../../ui/media";
+
+interface ITab {
+  isActive: boolean;
+}
 
 const StyledBook = styled.div`
   display: flex;
@@ -11,9 +15,6 @@ const StyledBook = styled.div`
   ${media.tablet} {
     flex-direction: column;
   }
-  /* ${media.mobile} {
-    display: block;
-  } */
 `;
 
 const BookImageContainer = styled.div`
@@ -135,23 +136,23 @@ const StyledLink = styled(Link)`
 const TabContainer = styled.div`
   display: grid;
   column-gap: 20px;
-  grid-template-columns: repeat(3, 160px);
+  grid-template-columns: repeat(2, 160px);
 
   width: 100%;
   margin-bottom: 48px;
 
   border-bottom: 1px solid ${Colors.GRAY};
   ${media.mobile} {
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(2, 100px);
     column-gap: 10px;
   }
 `;
 
-const Tab = styled.button`
+const Tab = styled.button<ITab>`
   ${typography.tab}
-  padding: 0 40px 24px;
+  padding: 0 40px 20px;
   ${media.mobile} {
-    padding: 0;
+    padding: 10px;
   }
 `;
 
@@ -182,6 +183,34 @@ const Container = styled.div`
   }
 `;
 
+const TabPanel = styled.div`
+  min-height: 70px;
+  ${typography.B1}
+  color: ${Colors.PRIMARY};
+  margin-bottom: 48px;
+  ${media.mobile} {
+    min-height: 193px;
+  }
+`;
+
+const Icons = styled.div`
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 30px);
+  gap: 10px;
+
+  margin-bottom: 20px;
+`;
+const IconsItem = styled.a`
+  margin: 0 auto;
+  padding: 10px;
+
+  border-bottom: 1px solid ${Colors.RED};
+`;
+
+const IconFacebook = styled(Facebook)``;
+const IconTwitter = styled(Twitter)``;
+
 export {
   StyledBook,
   BookImageContainer,
@@ -204,4 +233,9 @@ export {
   Container,
   PreviewButton,
   HeardContainer,
+  TabPanel,
+  IconTwitter,
+  IconFacebook,
+  IconsItem,
+  Icons,
 };

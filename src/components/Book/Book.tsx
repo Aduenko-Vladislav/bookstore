@@ -1,7 +1,7 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { StarBlack, StarLight } from "../../assets/icons";
 import { IDetailsBookApi } from "../../services/types";
-import { useAppDispatch } from "../../store/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { addFavotites } from "../../store/slices/userSlice";
 import { IBook, ICartInfo } from "../../store/types";
 import { Heard } from "../Heard/Heard";
@@ -28,8 +28,15 @@ import {
   DetailsList,
   PreviewButton,
   HeardContainer,
+  TabPanel,
+  IconFacebook,
+  Icons,
+  IconsItem,
+  IconTwitter,
 } from "./styles";
 import { addCart } from "../../store/slices/cartSlice";
+import { BookSlider } from "../BookSlider/BookSlider";
+import { getUserInfo } from "../../store/selectors/userSelectors";
 interface IBookDetails {
   book: IDetailsBookApi;
 }
@@ -63,6 +70,16 @@ const Book = ({ book }: IBookDetails) => {
     dispatch(addFavotites(book));
   };
 
+  const [active, setActive] = useState<string>("description");
+  const handleDescription = () => {
+    setActive("description");
+  };
+
+  const handleAuthors = () => {
+    setActive("authors");
+  };
+
+  const { favorites } = useAppSelector(getUserInfo);
   return (
     <>
       <StyledBook key={book.isbn13}>
@@ -109,11 +126,22 @@ const Book = ({ book }: IBookDetails) => {
       </StyledBook>
 
       <TabContainer>
-        <Tab>Description</Tab>
-        <Tab>Authors</Tab>
-        <Tab>Reviews</Tab>
+        <Tab isActive={active === "description"} onClick={handleDescription}>
+          Description
+        </Tab>
+        <Tab isActive={active === "authors"} onClick={handleAuthors}>
+          Authors
+        </Tab>
       </TabContainer>
-      <Description>{book.desc}</Description>
+      <TabPanel>
+        {active === "description" ? (
+          <Description>{book.desc}</Description>
+        ) : active === "authors" ? (
+          <Description>{book.authors}</Description>
+        ) : (
+          "Oooops 🙈"
+        )}
+      </TabPanel>
 
       <DetailsList id="details">
         <Parameters>Authors</Parameters>
@@ -134,6 +162,14 @@ const Book = ({ book }: IBookDetails) => {
         <Attribute>{book.url}</Attribute>
       </DetailsList>
 
+      <Icons>
+        <IconsItem href="https://facebook.com">
+          <IconFacebook id="facebook" />
+        </IconsItem>
+        <IconsItem href="https://twitter.com">
+          <IconTwitter id="twitter" />
+        </IconsItem>
+      </Icons>
       <Subscribe />
     </>
   );
