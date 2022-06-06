@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { bookApi } from "../../services/bookService";
 import { IDetailsBookApi, INewBooksApi } from "../../services/types";
-import { IBookApi, IArguments } from "../types";
+import { IBookApi, IArguments, IresultBooksApi } from "../types";
 
 const initialState: IBookApi = {
   books: [],
@@ -43,7 +43,7 @@ export const fetchBookDetails = createAsyncThunk<IDetailsBookApi, string>(
   }
 );
 
-export const fetchBooksBySearch = createAsyncThunk<any, IArguments>(
+export const fetchBooksBySearch = createAsyncThunk<IresultBooksApi, IArguments>(
   "books/fetchBooksBySearch",
   async ({ title, page }) => {
     const resultBooks = await bookApi.getBooksBySearch(title, page);

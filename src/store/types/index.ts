@@ -48,6 +48,13 @@ export interface IArguments {
   page: string;
 }
 
+export interface IresultBooksApi {
+  error: any;
+  page: string;
+  total: string;
+  books: IBook[];
+}
+
 export interface IBookApi {
   books: IBook[];
   error: any;
