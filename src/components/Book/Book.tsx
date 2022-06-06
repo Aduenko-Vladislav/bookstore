@@ -35,7 +35,6 @@ import {
   IconTwitter,
 } from "./styles";
 import { addCart } from "../../store/slices/cartSlice";
-import { getUserInfo } from "../../store/selectors/userSelectors";
 interface IBookDetails {
   book: IDetailsBookApi;
 }
@@ -78,7 +77,6 @@ const Book = ({ book }: IBookDetails) => {
     setActive("authors");
   };
 
-  const { favorites } = useAppSelector(getUserInfo);
   return (
     <>
       <StyledBook key={book.isbn13}>

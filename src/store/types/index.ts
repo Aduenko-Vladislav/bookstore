@@ -1,4 +1,5 @@
 import { RequestStatusType } from "../../config/RequestStatusType";
+import { IDetailsBookApi } from "../../services/types";
 
 export interface INewBooks {
   error: any;
@@ -40,4 +41,18 @@ export interface ICart {
 
 export interface IFavoriteBook {
   favorites: IBook[];
+}
+
+export interface IArguments {
+  title: string;
+  page: string;
+}
+
+
+export interface IBookApi {
+  books: IBook[];
+  error: any;
+  status: RequestStatusType;
+  total: string;
+  result: IDetailsBookApi
 }

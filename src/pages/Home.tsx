@@ -5,15 +5,23 @@ import Subscribe from "../components/Subscribe/Subscribe";
 import { Title } from "../components/Title/Title";
 import { useAppDispatch, useAppSelector } from "../store/hooks/hooks";
 import { fetchBook } from "../store/slices/bookSlice";
-import { getBooks } from "../store/selectors/bookSelectors";
+import { getBooks, getBooksStatus } from "../store/selectors/bookSelectors";
+import { Loading } from "../components/Loading/Loading";
 
 export const Home = () => {
   const dispatch = useAppDispatch();
-  const {books} = useAppSelector(getBooks);
+  const { books } = useAppSelector(getBooks);
   useEffect(() => {
     dispatch(fetchBook());
   }, [dispatch]);
 
+  const status = useAppSelector(getBooksStatus);
+  if (status === "loading") {
+    return <Loading />;
+  }
+  if (status === "error") {
+    return <Title>WE have some Problems</Title>;
+  }
 
   return (
     <>
