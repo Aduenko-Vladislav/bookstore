@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { StarBlack, StarLight } from "../../assets/icons";
 import { IDetailsBookApi } from "../../services/types";
-import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
+import { useAppDispatch } from "../../store/hooks/hooks";
 import { addFavotites } from "../../store/slices/userSlice";
 import { IBook, ICartInfo } from "../../store/types";
 import { Heard } from "../Heard/Heard";
@@ -59,6 +59,7 @@ const Book = ({ book }: IBookDetails) => {
     }
     return stars;
   };
+
   const dispatch = useAppDispatch();
   const handleCart = (book: ICartInfo) => {
     dispatch(addCart(book));

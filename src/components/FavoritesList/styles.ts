@@ -60,6 +60,7 @@ const FavoritesSubtitle = styled.p`
 
 const FavoritesPrice = styled.p`
   ${typography.H3};
+  font-size: 35px;
   align-content: flex-end;
 
   margin: auto 0 20px;

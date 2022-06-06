@@ -2,7 +2,7 @@ import axios from "axios";
 import { IDetailsBookApi, INewBooksApi, ISearchBooksApi } from "./types";
 
 class BookService {
-  private readonly API_URL = process.env.REACT_APP_API_URL
+  private readonly API_URL = process.env.REACT_APP_API_URL;
 
   private api = axios.create({
     baseURL: this.API_URL,

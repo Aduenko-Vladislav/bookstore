@@ -48,11 +48,10 @@ export interface IArguments {
   page: string;
 }
 
-
 export interface IBookApi {
   books: IBook[];
   error: any;
   status: RequestStatusType;
   total: string;
-  result: IDetailsBookApi
+  result: IDetailsBookApi;
 }

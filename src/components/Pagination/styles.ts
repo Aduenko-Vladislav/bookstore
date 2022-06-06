@@ -22,7 +22,7 @@ export const Button = styled.button`
     border-bottom: 1px solid ${Colors.PRIMARY};
   }
   &:active {
-    box-shadow: 4px 4px 30px ${Colors.RED}
+    box-shadow: 4px 4px 30px ${Colors.RED};
   }
 `;
 

@@ -1,4 +1,10 @@
-import { LeoBorderOne, LeoBorderTwo, LeoCoreOne, LeoCoreTwo, SpinnerBox } from "./styles";
+import {
+  LeoBorderOne,
+  LeoBorderTwo,
+  LeoCoreOne,
+  LeoCoreTwo,
+  SpinnerBox,
+} from "./styles";
 
 export const Loading = () => {
   return (
@@ -12,5 +18,3 @@ export const Loading = () => {
     </SpinnerBox>
   );
 };
-
-

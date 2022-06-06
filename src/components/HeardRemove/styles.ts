@@ -6,7 +6,7 @@ import { typography } from "../../ui/typography";
 export const StyledHeardRemove = styled.div`
   ${typography.button}
   ${media.tablet} {
-    padding: 10px 12px 7px
+    padding: 10px 12px 7px;
   }
   ${media.mobile} {
     padding: 7px 9px;

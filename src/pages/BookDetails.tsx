@@ -8,7 +8,6 @@ import { getBooks, getBooksStatus } from "../store/selectors/bookSelectors";
 import { fetchBookDetails } from "../store/slices/bookSlice";
 import { Loading } from "../components/Loading/Loading";
 
-
 export const BookDetails = () => {
   const { id = "" } = useParams();
   const { result } = useAppSelector(getBooks);

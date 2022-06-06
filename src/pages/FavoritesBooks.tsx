@@ -4,7 +4,6 @@ import { FavoritesList } from "../components/FavoritesList/FavoritesList";
 import { Title } from "../components/Title/Title";
 
 export const FavoritesBooks = () => {
-
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1);

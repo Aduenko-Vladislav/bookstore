@@ -4,7 +4,6 @@ import { getCartInfo } from "../../store/selectors/cartSelectors";
 import { removeCart } from "../../store/slices/cartSlice";
 import { ICartInfo } from "../../store/types";
 
-import { HeardRemove } from "../HeardRemove/HeardRemove";
 import {
   CartImg,
   CartPrice,
