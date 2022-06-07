@@ -16,16 +16,16 @@ const SpinnerBox = styled.div`
   position: relative;
 
   margin: 0 auto;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 
   background-color: transparent;
 `;
 
 const LeoBorderOne = styled.div`
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   padding: 3px;
   display: flex;
   justify-content: center;
@@ -49,8 +49,8 @@ const LeoCoreOne = styled.div`
 
 const LeoBorderTwo = styled.div`
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   padding: 3px;
   display: flex;
   justify-content: center;
