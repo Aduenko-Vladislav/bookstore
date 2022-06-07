@@ -18,6 +18,9 @@ const Container = styled.div`
 `;
 
 const StyledLink = styled(Link)`
+  margin-right: 20px;
+`;
+const BookContainer = styled.div`
   display: flex;
   margin-bottom: 20px;
   ${media.mobile} {
@@ -38,7 +41,7 @@ const DescriptionContainer = styled.div`
   }
   ${media.mobile} {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -46,7 +49,6 @@ const CartImg = styled.img`
   background: ${Colors.BLUE};
   max-width: 226px;
   width: 100%;
-  margin: 0 63px 20px;
   ${media.mobile} {
     margin: 0;
     max-width: none;
@@ -55,10 +57,10 @@ const CartImg = styled.img`
 
 const CartTitle = styled.p`
   ${typography.H3};
-  margin: 65px 0 25px;
+  margin: 25px 0;
   padding: 0 10px;
   ${media.mobile} {
-    margin: 15px 0;
+    margin: 5px 0;
   }
 `;
 
@@ -76,7 +78,7 @@ const CartPrice = styled.p`
 
   width: 155px;
   ${media.mobile} {
-    width: 100%;
+    margin-left: auto;
   }
 `;
 
@@ -84,6 +86,42 @@ const RemoveContainer = styled.button`
   position: absolute;
   right: 0;
   top: 0;
+`;
+
+const AmountContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 120px;
+  margin: auto 10px 0;
+`;
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+
+  height: 30px;
+  width: 30px;
+`;
+const Count = styled.p`
+  ${typography.H3}
+`;
+
+const TotalContainer = styled.div`
+  max-width: 300px;
+  width: 100%;
+  margin-left: auto;
+  ${media.mobile} {
+    max-width: 170px;
+  }
+`;
+
+const TotalPrice = styled.p`
+  ${typography.H2};
+  font-size: 35px;
 `;
 
 export {
@@ -96,4 +134,10 @@ export {
   CartSubtitle,
   Container,
   RemoveContainer,
+  AmountContainer,
+  Button,
+  Count,
+  TotalContainer,
+  TotalPrice,
+  BookContainer,
 };

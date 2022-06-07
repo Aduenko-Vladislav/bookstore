@@ -36,7 +36,12 @@ export interface ICartInfo {
 }
 
 export interface ICart {
-  cart: ICartInfo[];
+  cart: IBookCartApi[];
+  total: number;
+}
+
+export interface IBookCartApi extends ICartInfo {
+  amount: number;
 }
 
 export interface IFavoriteBook {

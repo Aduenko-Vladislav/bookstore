@@ -3,7 +3,7 @@ import { StarBlack, StarLight } from "../../assets/icons";
 import { IDetailsBookApi } from "../../services/types";
 import { useAppDispatch } from "../../store/hooks/hooks";
 import { addFavotites } from "../../store/slices/userSlice";
-import { IBook, ICartInfo } from "../../store/types";
+import { IBook } from "../../store/types";
 import { Heard } from "../Heard/Heard";
 import Subscribe from "../Subscribe/Subscribe";
 import { v4 as uuidv4 } from "uuid";
@@ -61,8 +61,8 @@ const Book = ({ book }: IBookDetails) => {
   };
 
   const dispatch = useAppDispatch();
-  const handleCart = (book: ICartInfo) => {
-    dispatch(addCart(book));
+  const handleCart = (book: IDetailsBookApi) => {
+    dispatch(addCart({ ...book, amount: 1 }));
   };
 
   const handleFavorites = (book: IBook) => {

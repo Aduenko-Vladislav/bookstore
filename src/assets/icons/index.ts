@@ -12,6 +12,8 @@ import { ReactComponent as Delete } from "./delete.svg";
 import { ReactComponent as Circle } from "./red-circle.svg";
 import { ReactComponent as Facebook } from "./facebook.svg";
 import { ReactComponent as Twitter } from "./twitter.svg";
+import { ReactComponent as Minus } from "./minus.svg";
+import { ReactComponent as Plus } from "./plus.svg";
 
 export {
   Back,
@@ -28,4 +30,6 @@ export {
   Circle,
   Twitter,
   Facebook,
+  Minus,
+  Plus,
 };
