@@ -18,16 +18,26 @@ import {
 } from "./styles";
 
 import { useState } from "react";
+import {
+  setUser,
+  setUserName,
+  setPassword,
+} from "../../store/slices/userSlice";
+import { useAppDispatch } from "../../store/hooks/hooks";
 
 export const SignInForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
+  const dispatch = useAppDispatch();
   const [isSignInError, setIsSignInError] = useState(false);
 
   const onSubmit = ({ email, password, name }: any) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        dispatch(setUser(userCredential.user.email));
+        dispatch(setUserName(name));
+        dispatch(setPassword(password));
         navigate(routes.ACCOUNT);
       })
       .catch((error) => {
