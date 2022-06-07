@@ -20,6 +20,10 @@ export interface IBook {
 export interface IUser {
   sortMode: "asc" | "desc";
   favorites: IBook[];
+  isAuth: boolean;
+  email: string | undefined;
+  name: string | undefined;
+  password: string | undefined;
 }
 
 export interface ICartInfo {

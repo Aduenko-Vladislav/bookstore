@@ -36,7 +36,7 @@ export const Nav = () => {
           <></>
         )}
       </StyledLink>
-      <StyledLink to="/">
+      <StyledLink to={routes.ACCOUNT}>
         <NavIconUser />
       </StyledLink>
     </StyledNav>
