@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Delete, Minus, Plus } from "../../assets/icons";
+import { IDetailsBookApi } from "../../services/types";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getCartInfo } from "../../store/selectors/cartSelectors";
 import {
@@ -7,7 +8,7 @@ import {
   increaseAmount,
   removeCart,
 } from "../../store/slices/cartSlice";
-import { IBookCartApi, ICartInfo } from "../../store/types";
+import { IBookCartApi } from "../../store/types";
 
 import {
   AmountContainer,
@@ -31,7 +32,7 @@ export const CartList = () => {
   const { cart } = useAppSelector(getCartInfo);
 
   const dispatch = useAppDispatch();
-  const handleRemoveCart = (book: ICartInfo) => {
+  const handleRemoveCart = (book: any) => {
     dispatch(removeCart(book));
   };
   const handlePlus = (book: IBookCartApi) => {
