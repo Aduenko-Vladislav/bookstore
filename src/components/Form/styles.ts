@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { typography } from "../../ui/typography";
 import { media } from "../../ui/media";
+import { Colors } from "../../ui/colors";
 
 const StyledForm = styled.form`
   position: relative;
@@ -8,7 +9,7 @@ const StyledForm = styled.form`
   max-width: 542px;
   width: 100%;
 
-  border: 1px solid #e7e7e7;
+  border: 1px solid ${Colors.GRAY};
   ${media.tablet} {
     max-width: 342px;
   }

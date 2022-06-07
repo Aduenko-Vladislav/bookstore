@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Delete, Minus, Plus } from "../../assets/icons";
-import { IDetailsBookApi } from "../../services/types";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getCartInfo } from "../../store/selectors/cartSelectors";
 import {

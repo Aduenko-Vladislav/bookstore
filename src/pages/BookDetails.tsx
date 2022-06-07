@@ -28,7 +28,7 @@ export const BookDetails = () => {
     return <Loading />;
   }
   if (status === "error") {
-    return <Title>WE have some Problems</Title>;
+    return <Title>We have some Problems. See u later 😒</Title>;
   }
   return (
     <>
