@@ -31,14 +31,14 @@ export const Input = styled.input`
 
   margin-bottom: 40px;
   ${typography.input}
-  border: 1px solid  ${Colors.GRAY};
+  padding: 12px 0px 12px 12px;
+  border: 1px solid ${Colors.GRAY};
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
-  }
-  ${media.mobile} {
-    max-width: 300px;
+  }  ${media.mobile} {
+    padding: 12px 0px 12px 5px;
   }
 `;
 
