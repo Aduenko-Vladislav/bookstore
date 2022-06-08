@@ -22,6 +22,9 @@ const SearchInput = styled.input`
   ${typography.input}
   max-width: 480px;
   width: 100%;
+  ${media.mobile} {
+    padding: 0;
+  }
 `;
 
 const SearchFindButton = styled.button`
