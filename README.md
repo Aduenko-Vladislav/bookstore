@@ -19,7 +19,6 @@ User ability:
 
 - Registration
 - Authorization
-- Change username and email
 - Add or remove book from favorites list
 - Add books to cart and see total price
 - Watch book details
@@ -38,10 +37,6 @@ User ability:
 4. Install NPM packages
    ```sh
    npm install
-   ```
-5. Enter your API in `bookService`
-   ```js
-   private readonly API_URL = "API";
    ```
  
 ### Tools and packages
