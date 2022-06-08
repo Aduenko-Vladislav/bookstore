@@ -4,7 +4,7 @@
 <div align="center">
     <p align="center">
     *
-    <a href="https://aduenko-vladislav.github.io/bookstore)">Watch Demo</a>
+    <a href="https://aduenko-vladislav.github.io/bookstore">Watch Demo</a>
     * </p>
 </div>
 <p align="center">BookStore</p>
