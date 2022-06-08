@@ -3,16 +3,16 @@
 <br />
 <div align="center">
     <p align="center">
-    ·
-    <a href="https://aduenko-vladislav.github.io/bookstore)">View Demo</a>
-    · </p>
+    *
+    <a href="https://aduenko-vladislav.github.io/bookstore)">Watch Demo</a>
+    * </p>
 </div>
-<p align="center">(BookStore)</p>
+<p align="center">BookStore</p>
 
 <img src="BookStore1.jpg" alt="bookstore" width="100%">
 <img src="BookStore2.jpg" alt="bookstore" width="100%">
 
-<p align="center">(BookDetails)</p>
+<p align="center">BookDetails</p>
 <img src="BookStore3.jpg" alt="book details" width="100%">
 
 User ability:
