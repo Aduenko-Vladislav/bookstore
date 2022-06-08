@@ -37,8 +37,11 @@ User ability:
    ```sh
    npm install
    ```
-
-
+5. Enter your API in `bookService`
+   ```js
+   private readonly API_URL = "API";
+   ```
+ 
 ### Tools and packages
 
 - [React.js](https://reactjs.org/)
@@ -56,7 +59,5 @@ User ability:
 - [gh-pages](https://pages.github.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 
