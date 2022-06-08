@@ -7,8 +7,36 @@
     <a href="https://aduenko-vladislav.github.io/bookstore)">View Demo</a>
     · </p>
 </div>
+<p align="center">(BookStore)</p>
 
 <img src="BookStore1.jpg" alt="bookstore" width="100%">
+<img src="BookStore2.jpg" alt="bookstore" width="100%">
+
+<p align="center">(BookDetails)</p>
+<img src="BookStore3.jpg" alt="book details" width="100%">
+
+User ability:
+
+- Registration
+- Authorization
+- Change username and email
+- Add or remove book from favorites list
+- Add books to cart and see total price
+- Watch book details
+- Watch book preview pdf
+
+### Installation
+
+1. Get a free API at [IT Bookstore API](https://api.itbook.store/)
+2. Register on [Firebase](https://firebase.google.com/), create your data base and copy Firebase configuration
+3. Clone the repo
+   ```sh
+   git clone https://github.com/Aduenko-Vladislav/bookstore.git
+   ```
+4. Install NPM packages
+   ```sh
+   npm install
+   ```
 
 
 ### Tools and packages
@@ -32,17 +60,3 @@
 
 
 
-
-
-
-
-
-## About The Project
-
-[![BookStore_1 ][BookStore]](https://prnt.sc/lq_8Q8SaMrgx)
-[![BookStore_2 ][BookStore_2]](https://prnt.sc/uJdksegUJm1h)
-
-
-
-
-Enjoy my project [React-Bookstore](https://aduenko-vladislav.github.io/bookstore/).
