@@ -52,7 +52,6 @@ User ability:
 - [Styled-components](https://styled-components.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Firebase](https://firebase.google.com/)
-- [Framer Motion](https://www.framer.com/motion/)
 - [gh-pages](https://pages.github.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
