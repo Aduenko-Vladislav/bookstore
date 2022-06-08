@@ -2,8 +2,8 @@
 <!-- PROJECT -->
 <br />
 <div align="center">
-    <img src="https://prnt.sc/lq_8Q8SaMrgx" alt="bookstore" width="100%" height="100%">
-  <img src="https://prnt.sc/uJdksegUJm1h" alt="bookstore2" width="100%" height="100%">
+    <img src="BookStore1.jpg" alt="bookstore" width="100%" >
+  <img src="BookStore2.jpg" alt="bookstore1" width="100%" >
     <p align="center">
     ·
     <a href="https://aduenko-vladislav.github.io/bookstore)">View Demo</a>
