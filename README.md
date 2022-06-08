@@ -24,6 +24,7 @@ User ability:
 - Add books to cart and see total price
 - Watch book details
 - Watch book preview pdf
+- Pagination
 
 ### Installation
 
