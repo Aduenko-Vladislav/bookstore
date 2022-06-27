@@ -93,7 +93,7 @@ const AmountContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 120px;
+  width: 180px;
   margin: auto 10px 0;
 `;
 const Button = styled.button`
@@ -104,7 +104,7 @@ const Button = styled.button`
   padding: 5px;
 
   height: 30px;
-  width: 30px;
+  width: 50px;
 `;
 const Count = styled.p`
   ${typography.H3}
