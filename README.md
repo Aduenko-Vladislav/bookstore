@@ -29,12 +29,11 @@ User ability:
 ### Installation
 
 1. Get a free API at [IT Bookstore API](https://api.itbook.store/)
-2. Register on [Firebase](https://firebase.google.com/), create your data base and copy Firebase configuration
-3. Clone the repo
+2. Clone the repo
    ```sh
    git clone https://github.com/Aduenko-Vladislav/bookstore.git
    ```
-4. Install NPM packages
+3. Install NPM packages
    ```sh
    npm install
    ```
